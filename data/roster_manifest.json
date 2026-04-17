@@ -6,16 +6,14 @@
       {
         "name": "ポチョLOVE",
         "enabled": true,
-        "portraitImage": "portraits/owner/ポチョLOVE.png",
-        "armbandImage": "armbands/owner/owner_armband_01.png"
+        "portraitImage": "portraits/owner/ポチョLOVE.png"
       }
     ],
     "Manager": [
       {
-        "name": "Manager Sample",
+        "name": "aizawaakito0418",
         "enabled": true,
-        "portraitImage": "portraits/manager/manager_01.png",
-        "armbandImage": "armbands/manager/manager_armband_01.png"
+        "portraitImage": "portraits/manager/aizawaakito0418.png"
       }
     ],
     "Operator": [
