@@ -20,14 +20,12 @@
       {
         "name": "Operator A",
         "enabled": true,
-        "portraitImage": "portraits/operator/operator_01.png",
-        "armbandImage": "armbands/operator/operator_armband_01.png"
+        "portraitImage": "portraits/operator/operator_01.png"
       },
       {
         "name": "Operator B",
         "enabled": true,
-        "portraitImage": "portraits/operator/operator_02.png",
-        "armbandImage": "armbands/operator/operator_armband_02.png"
+        "portraitImage": "portraits/operator/operator_02.png"
       }
     ],
     "Assistant": [],
