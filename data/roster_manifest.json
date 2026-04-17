@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "baseImageUrl": "https://ClubCommuShow.github.io/ClubCommuShow/images/",
+  "categories": {
+    "Owner": [
+      {
+        "name": "ポチョLOVE",
+        "enabled": true,
+        "portraitImage": "portraits/owner/owner_01.png",
+        "armbandImage": "armbands/owner/owner_armband_01.png"
+      }
+    ],
+    "Manager": [
+      {
+        "name": "Manager Sample",
+        "enabled": true,
+        "portraitImage": "portraits/manager/manager_01.png",
+        "armbandImage": "armbands/manager/manager_armband_01.png"
+      }
+    ],
+    "Operator": [
+      {
+        "name": "Operator A",
+        "enabled": true,
+        "portraitImage": "portraits/operator/operator_01.png",
+        "armbandImage": "armbands/operator/operator_armband_01.png"
+      },
+      {
+        "name": "Operator B",
+        "enabled": true,
+        "portraitImage": "portraits/operator/operator_02.png",
+        "armbandImage": "armbands/operator/operator_armband_02.png"
+      }
+    ],
+    "Assistant": [],
+    "StaffLeader": [],
+    "Staff": [],
+    "CastLeader": [],
+    "UpperCast": [],
+    "DownerCast": [],
+    "CondisionalCast": [],
+    "EventPoster": [
+      {
+        "name": "メインイベントポスター",
+        "enabled": true,
+        "posterImage": "posters/eventposter/event_main_01.png"
+      }
+    ],
+    "Notice": [
+      {
+        "name": "注意事項 01",
+        "enabled": true,
+        "posterImage": "posters/notice/notice_01.png"
+      }
+    ],
+    "Menu": [
+      {
+        "name": "メニュー 01",
+        "enabled": true,
+        "posterImage": "posters/menu/menu_01.png"
+      }
+    ],
+    "FrontPoster": [
+      {
+        "name": "Front Poster 01",
+        "enabled": true,
+        "posterImage": "posters/frontposter/front_01.png"
+      }
+    ],
+    "SidePoster": [
+      {
+        "name": "Side Poster 01",
+        "enabled": true,
+        "posterImage": "posters/sideposter/side_01.png"
+      }
+    ],
+    "BackPoster": [
+      {
+        "name": "Back Poster 01",
+        "enabled": true,
+        "posterImage": "posters/backposter/back_01.png"
+      }
+    ]
+  }
+}
