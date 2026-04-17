@@ -18,14 +18,19 @@
     ],
     "Operator": [
       {
-        "name": "Operator A",
+        "name": "MiyakoAoi",
         "enabled": true,
-        "portraitImage": "portraits/operator/operator_01.png"
+        "portraitImage": "portraits/operator/MiyakoAoi.png"
       },
       {
-        "name": "Operator B",
+        "name": "ここらо",
         "enabled": true,
-        "portraitImage": "portraits/operator/operator_02.png"
+        "portraitImage": "portraits/operator/ここらо.png"
+      },
+      {
+        "name": "ほのか_",
+        "enabled": true,
+        "portraitImage": "portraits/operator/ほのか_.png"
       }
     ],
     "Assistant": [],
