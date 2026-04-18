@@ -2,8 +2,41 @@
   "members": [
     {
       "enabled": true,
-      "name": "YourDisplayName",
+      "name": "ポチョLOVE",
       "category": "Owner",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "Clubコミュ症公式",
+      "category": "Owner",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "aizawaakito0418",
+      "category": "Manager",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "MiyakoAoi",
+      "category": "Operator",
       "slot": 0,
       "spawnKey": "staff_room",
       "hasPermission": true,
