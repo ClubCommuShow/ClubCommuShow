@@ -5,7 +5,7 @@
       "name": "YourDisplayName",
       "category": "Owner",
       "slot": 0,
-      "spawnKey": "owner_room",
+      "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
       "showName": true,
