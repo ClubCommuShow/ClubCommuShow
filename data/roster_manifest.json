@@ -1,86 +1,92 @@
 {
   "version": 1,
-  "baseImageUrl": "https://ClubCommuShow.github.io/ClubCommuShow/images/",
-  "categories": {
-    "Owner": [
-      {
-        "name": "ポチョLOVE",
-        "enabled": true,
-        "portraitImage": "portraits/owner/ポチョLOVE.png"
-      }
-    ],
-    "Manager": [
-      {
-        "name": "aizawaakito0418",
-        "enabled": true,
-        "portraitImage": "portraits/manager/aizawaakito0418.png"
-      }
-    ],
-    "Operator": [
-      {
-        "name": "MiyakoAoi",
-        "enabled": true,
-        "portraitImage": "portraits/operator/MiyakoAoi.png"
-      },
-      {
-        "name": "ここらо",
-        "enabled": true,
-        "portraitImage": "portraits/operator/ここらо.png"
-      },
-      {
-        "name": "ほのか_",
-        "enabled": true,
-        "portraitImage": "portraits/operator/ほのか_.png"
-      }
-    ],
-    "Assistant": [],
-    "StaffLeader": [],
-    "Staff": [],
-    "CastLeader": [],
-    "UpperCast": [],
-    "DownerCast": [],
-    "CondisionalCast": [],
-    "EventPoster": [
-      {
-        "name": "メインイベントポスター",
-        "enabled": true,
-        "posterImage": "posters/eventposter/ClubCommuShow.png"
-      }
-    ],
-    "Notice": [
-      {
-        "name": "注意事項 01",
-        "enabled": true,
-        "posterImage": "posters/notice/WELCOME_BOARD.png"
-      }
-    ],
-    "Menu": [
-      {
-        "name": "メニュー 01",
-        "enabled": true,
-        "posterImage": "posters/menu/menu_01.png"
-      }
-    ],
-    "FrontPoster": [
-      {
-        "name": "Front Poster 01",
-        "enabled": true,
-        "posterImage": "posters/frontposter/front_01.png"
-      }
-    ],
-    "SidePoster": [
-      {
-        "name": "Side Poster 01",
-        "enabled": true,
-        "posterImage": "posters/sideposter/side_01.png"
-      }
-    ],
-    "BackPoster": [
-      {
-        "name": "Back Poster 01",
-        "enabled": true,
-        "posterImage": "posters/backposter/back_01.png"
-      }
-    ]
-  }
+  "updatedAt": "2026-04-18T19:00:00+09:00",
+  "members": [
+    {
+      "enabled": true,
+      "name": "ポチョLOVE",
+      "category": "Owner",
+      "spawnKey": "owner_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true
+    },
+    {
+      "enabled": true,
+      "name": "ManagerA",
+      "category": "Manager",
+      "spawnKey": "manager_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true
+    },
+    {
+      "enabled": true,
+      "name": "OperatorA",
+      "category": "Operator",
+      "spawnKey": "operator_1",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true
+    },
+    {
+      "enabled": true,
+      "name": "StaffA",
+      "category": "Staff",
+      "spawnKey": "staff_1",
+      "hasPermission": false,
+      "showArmband": true,
+      "showName": true
+    },
+    {
+      "enabled": true,
+      "name": "UpperCastA",
+      "category": "UpperCast",
+      "spawnKey": "cast_upper_1",
+      "hasPermission": false,
+      "showArmband": true,
+      "showName": true
+    },
+    {
+      "enabled": false,
+      "name": "HiddenExample",
+      "category": "Assistant",
+      "spawnKey": "assistant_1",
+      "hasPermission": false,
+      "showArmband": false,
+      "showName": false
+    }
+  ],
+  "posters": [
+    {
+      "enabled": true,
+      "category": "EventPoster",
+      "imageKey": "poster/event/main"
+    },
+    {
+      "enabled": true,
+      "category": "注意事項",
+      "imageKey": "poster/notice/01"
+    },
+    {
+      "enabled": true,
+      "category": "メニュー",
+      "imageKey": "poster/menu/01"
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "imageKey": "poster/front/01"
+    },
+    {
+      "enabled": false,
+      "category": "SidePoster",
+      "imageKey": "poster/side/01"
+    },
+    {
+      "enabled": false,
+      "category": "BackPoster",
+      "imageKey": "poster/back/01"
+    }
+  ]
 }
