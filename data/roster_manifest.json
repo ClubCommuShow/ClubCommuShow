@@ -1,104 +1,38 @@
 {
-  "version": 1,
-  "updatedAt": "2026-04-18T22:00:00+09:00",
   "members": [
     {
       "enabled": true,
-      "name": "ポチョLOVE",
+      "name": "YourDisplayName",
       "category": "Owner",
-      "spawnKey": "staff_room",
-      "portraitKey": "portrait/owner/ポチョLOVE",
+      "slot": 0,
+      "spawnKey": "owner_room",
       "hasPermission": true,
-      "showPortrait": true,
       "showArmband": true,
-      "showName": true
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
-      "name": "ManagerA",
-      "category": "Manager",
-      "spawnKey": "manager_room",
-      "portraitKey": "portrait/manager/manager_a",
-      "hasPermission": true,
-      "showPortrait": true,
-      "showArmband": true,
-      "showName": true
-    },
-    {
-      "enabled": true,
-      "name": "OperatorA",
-      "category": "Operator",
-      "spawnKey": "operator_1",
-      "portraitKey": "portrait/operator/operator_a",
-      "hasPermission": true,
-      "showPortrait": true,
-      "showArmband": true,
-      "showName": true
-    },
-    {
-      "enabled": true,
-      "name": "StaffA",
+      "name": "StaffExample",
       "category": "Staff",
-      "spawnKey": "staff_1",
-      "portraitKey": "portrait/staff/staff_a",
-      "hasPermission": false,
-      "showPortrait": true,
+      "slot": 0,
+      "spawnKey": "staff_room_0",
+      "hasPermission": true,
       "showArmband": true,
-      "showName": true
-    },
-    {
-      "enabled": true,
-      "name": "UpperCastA",
-      "category": "UpperCast",
-      "spawnKey": "cast_upper_1",
-      "portraitKey": "portrait/uppercast/upper_a",
-      "hasPermission": false,
-      "showPortrait": true,
-      "showArmband": true,
-      "showName": true
-    },
-    {
-      "enabled": false,
-      "name": "HiddenExample",
-      "category": "Assistant",
-      "spawnKey": "assistant_1",
-      "portraitKey": "",
-      "hasPermission": false,
-      "showPortrait": false,
-      "showArmband": false,
-      "showName": false
+      "showName": true,
+      "showPortrait": true
     }
   ],
   "posters": [
     {
       "enabled": true,
       "category": "EventPoster",
-      "imageKey": "poster/event/main"
-    },
-    {
-      "enabled": true,
-      "category": "注意事項",
-      "imageKey": "poster/notice/01"
-    },
-    {
-      "enabled": true,
-      "category": "メニュー",
-      "imageKey": "poster/menu/01"
+      "slot": 0
     },
     {
       "enabled": true,
       "category": "FrontPoster",
-      "imageKey": "poster/front/01"
-    },
-    {
-      "enabled": false,
-      "category": "SidePoster",
-      "imageKey": "poster/side/01"
-    },
-    {
-      "enabled": false,
-      "category": "BackPoster",
-      "imageKey": "poster/back/01"
+      "slot": 0
     }
   ]
 }
