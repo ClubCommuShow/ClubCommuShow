@@ -1,13 +1,15 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T19:00:00+09:00",
+  "updatedAt": "2026-04-18T22:00:00+09:00",
   "members": [
     {
       "enabled": true,
       "name": "ポチョLOVE",
       "category": "Owner",
       "spawnKey": "owner_room",
+      "portraitKey": "portrait/owner/potyo",
       "hasPermission": true,
+      "showPortrait": true,
       "showArmband": true,
       "showName": true
     },
@@ -16,7 +18,9 @@
       "name": "ManagerA",
       "category": "Manager",
       "spawnKey": "manager_room",
+      "portraitKey": "portrait/manager/manager_a",
       "hasPermission": true,
+      "showPortrait": true,
       "showArmband": true,
       "showName": true
     },
@@ -25,7 +29,9 @@
       "name": "OperatorA",
       "category": "Operator",
       "spawnKey": "operator_1",
+      "portraitKey": "portrait/operator/operator_a",
       "hasPermission": true,
+      "showPortrait": true,
       "showArmband": true,
       "showName": true
     },
@@ -34,7 +40,9 @@
       "name": "StaffA",
       "category": "Staff",
       "spawnKey": "staff_1",
+      "portraitKey": "portrait/staff/staff_a",
       "hasPermission": false,
+      "showPortrait": true,
       "showArmband": true,
       "showName": true
     },
@@ -43,7 +51,9 @@
       "name": "UpperCastA",
       "category": "UpperCast",
       "spawnKey": "cast_upper_1",
+      "portraitKey": "portrait/uppercast/upper_a",
       "hasPermission": false,
+      "showPortrait": true,
       "showArmband": true,
       "showName": true
     },
@@ -52,7 +62,9 @@
       "name": "HiddenExample",
       "category": "Assistant",
       "spawnKey": "assistant_1",
+      "portraitKey": "",
       "hasPermission": false,
+      "showPortrait": false,
       "showArmband": false,
       "showName": false
     }
