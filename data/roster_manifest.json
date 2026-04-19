@@ -615,6 +615,11 @@
     },
     {
       "enabled": true,
+      "category": "NoticePoster",
+      "slot": 9
+    },
+    {
+      "enabled": true,
       "category": "MenuPoster",
       "slot": 0
     },
