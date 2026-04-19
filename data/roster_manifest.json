@@ -570,92 +570,92 @@
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 0
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 1
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 2
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 3
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 4
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 5
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 6
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 7
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 8
     },
     {
       "enabled": true,
-      "category": "NoticePoster",
+      "category": "Notice",
       "slot": 9
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 0
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 1
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 2
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 3
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 4
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 5
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 6
     },
     {
       "enabled": true,
-      "category": "MenuPoster",
+      "category": "Menu",
       "slot": 7
     }
   ]
