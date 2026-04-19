@@ -46,10 +46,406 @@
     },
     {
       "enabled": true,
-      "name": "StaffExample",
+      "name": "ほのか_",
+      "category": "Operator",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ここらо",
+      "category": "Operator",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "rokyodragon",
+      "category": "Assistant",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "永遠-towa-",
+      "category": "Assistant",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "望黛 彩晴",
+      "category": "Assistant",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "ストロベリーのマカ",
+      "category": "StaffLeader",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "nekomaru49",
       "category": "Staff",
       "slot": 0,
-      "spawnKey": "staff_room_0",
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "星海ヒロ",
+      "category": "Staff",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "Tixia",
+      "category": "Staff",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "我愛鳴蕩＠がーねっと",
+      "category": "Staff",
+      "slot": 3,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "我愛鳴蕩＠がーねっと",
+      "category": "Staff",
+      "slot": 4,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "し ゃ ち",
+      "category": "Staff",
+      "slot": 5,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "Yoshi33563",
+      "category": "Staff",
+      "slot": 6,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ずっと揺れていたい。",
+      "category": "CastLeader",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "黒喰ぴぴ",
+      "category": "UpperCast",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ごまもっち",
+      "category": "UpperCast",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "くれい！",
+      "category": "UpperCast",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "クドウ_",
+      "category": "UpperCast",
+      "slot": 3,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "青染るの",
+      "category": "UpperCast",
+      "slot": 4,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "でらまん",
+      "category": "UpperCast",
+      "slot": 5,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "さくりす",
+      "category": "UpperCast",
+      "slot": 6,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "みも77",
+      "category": "UpperCast",
+      "slot": 7,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "なこった",
+      "category": "UpperCast",
+      "slot": 8,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "なこった",
+      "category": "UpperCast",
+      "slot": 9,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "かざき_りわと",
+      "category": "UpperCast",
+      "slot": 10,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ぼろだ。",
+      "category": "DownerCast",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ZetOsan",
+      "category": "DownerCast",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "まぼまぼ",
+      "category": "DownerCast",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "まもなか",
+      "category": "DownerCast",
+      "slot": 3,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "なす_；",
+      "category": "DownerCast",
+      "slot": 4,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "冬野しぐれ",
+      "category": "DownerCast",
+      "slot": 5,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "笠っち0123",
+      "category": "DownerCast",
+      "slot": 6,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "おろし生姜",
+      "category": "DownerCast",
+      "slot": 7,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "yuki_snow8",
+      "category": "DownerCast",
+      "slot": 8,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "aster_oct",
+      "category": "DownerCast",
+      "slot": 9,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "プニキ（Aspire_K4）",
+      "category": "CondisionalCast",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "しれん_",
+      "category": "CondisionalCast",
+      "slot": 1,
+      "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
       "showName": true,
@@ -64,8 +460,198 @@
     },
     {
       "enabled": true,
+      "category": "EventPoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
       "category": "FrontPoster",
       "slot": 0
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 2
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 3
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 4
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 5
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 6
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 7
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 8
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 9
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 10
+    },
+    {
+      "enabled": true,
+      "category": "FrontPoster",
+      "slot": 11
+    },
+    {
+      "enabled": true,
+      "category": "SidePoster",
+      "slot": 0
+    },
+    {
+      "enabled": true,
+      "category": "SidePoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
+      "category": "SidePoster",
+      "slot": 2
+    },
+    {
+      "enabled": true,
+      "category": "SidePoster",
+      "slot": 3
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 0
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 2
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 3
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 4
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 0
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 2
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 3
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 4
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 5
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 6
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 7
+    },
+    {
+      "enabled": true,
+      "category": "NoticePoster",
+      "slot": 8
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 0
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 1
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 2
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 3
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 4
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 5
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 6
+    },
+    {
+      "enabled": true,
+      "category": "MenuPoster",
+      "slot": 7
     }
   ]
 }
