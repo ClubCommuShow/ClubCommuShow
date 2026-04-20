@@ -545,6 +545,11 @@
     },
     {
       "enabled": true,
+      "category": "SidePoster",
+      "slot": 4
+    },
+    {
+      "enabled": true,
       "category": "BackPoster",
       "slot": 0
     },
@@ -567,6 +572,11 @@
       "enabled": true,
       "category": "BackPoster",
       "slot": 4
+    },
+    {
+      "enabled": true,
+      "category": "BackPoster",
+      "slot": 5
     },
     {
       "enabled": true,
