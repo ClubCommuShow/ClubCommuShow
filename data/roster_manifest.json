@@ -615,11 +615,6 @@
     },
     {
       "enabled": true,
-      "category": "BackPoster",
-      "slot": 8
-    },
-    {
-      "enabled": true,
       "category": "Notice",
       "slot": 0
     },
