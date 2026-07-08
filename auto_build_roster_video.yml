@@ -1,0 +1,60 @@
+name: Build roster video
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/roster_manifest.json'
+      - 'images/**'
+      - 'github_manifest_to_video.py'
+      - '.github/workflows/auto_build_roster_video.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-video:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Build mp4 from roster manifest
+        run: |
+          mkdir -p docs/videos
+          python github_manifest_to_video.py \
+            --repo-url "https://github.com/${{ github.repository }}/" \
+            --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json" \
+            --output "docs/videos/roster.mp4" \
+            --include-posters \
+            --include-portraits \
+            --fps 30 \
+            --crf 10 \
+            --gop 1
+
+      - name: Commit generated mp4
+        run: |
+          if git diff --quiet -- docs/videos/roster.mp4; then
+            echo "No changes in generated mp4"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/videos/roster.mp4
+          git commit -m "chore: rebuild roster video [skip ci]"
+          git push
