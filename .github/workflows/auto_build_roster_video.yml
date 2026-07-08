@@ -8,6 +8,7 @@ on:
       - 'data/roster_manifest.json'
       - 'images/**'
       - 'github_manifest_to_video.py'
+      - 'github_manifest_to_video_nocrop_pillow.py'
       - '.github/workflows/auto_build_roster_video.yml'
   workflow_dispatch:
 
@@ -29,6 +30,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
       - name: Install ffmpeg
         run: |
           sudo apt-get update
@@ -37,7 +43,11 @@ jobs:
       - name: Build mp4 from roster manifest
         run: |
           mkdir -p docs/videos
-          python github_manifest_to_video.py \
+          SCRIPT="github_manifest_to_video.py"
+          if [ -f "github_manifest_to_video_nocrop_pillow.py" ]; then
+            SCRIPT="github_manifest_to_video_nocrop_pillow.py"
+          fi
+          python "$SCRIPT" \
             --repo-url "https://github.com/${{ github.repository }}/" \
             --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json" \
             --output "docs/videos/roster.mp4" \
