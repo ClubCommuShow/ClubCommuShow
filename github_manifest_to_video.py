@@ -8,8 +8,11 @@ import sys
 import tempfile
 import urllib.parse
 import urllib.request
+from io import BytesIO
 from pathlib import Path
 from typing import Iterable
+
+from PIL import Image, ImageOps
 
 
 def run(cmd: list[str]) -> None:
@@ -27,10 +30,6 @@ def download_bytes(url: str) -> bytes:
     )
     with urllib.request.urlopen(req) as resp:
         return resp.read()
-
-
-def download_file(url: str, out_path: Path) -> None:
-    out_path.write_bytes(download_bytes(url))
 
 
 def url_exists(url: str) -> bool:
@@ -114,34 +113,42 @@ def to_raw_manifest_url(manifest_url: str, default_branch: str) -> str:
     return f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/data/roster_manifest.json'
 
 
-def ffmpeg_normalize(src_path: Path, dst_path: Path, width: int, height: int, background: str, fit_mode: str) -> None:
-    if fit_mode == 'contain':
-        vf = (
-            f'scale={width}:{height}:force_original_aspect_ratio=decrease,'
-            f'pad={width}:{height}:(ow-iw)/2:(oh-ih)/2:color={background},'
-            'setsar=1'
-        )
-    elif fit_mode == 'cover':
-        vf = (
-            f'scale={width}:{height}:force_original_aspect_ratio=increase,'
-            f'crop={width}:{height},'
-            'setsar=1'
-        )
-    else:
-        vf = f'scale={width}:{height},setsar=1'
+def parse_background(value: str) -> tuple[int, int, int, int]:
+    value = value.strip().lower()
+    if value == 'black':
+        return (0, 0, 0, 255)
+    if value == 'white':
+        return (255, 255, 255, 255)
+    if value in {'transparent', 'none'}:
+        return (0, 0, 0, 0)
+    if value.startswith('#'):
+        value = value[1:]
+        if len(value) == 6:
+            return (int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16), 255)
+        if len(value) == 8:
+            return (int(value[0:2], 16), int(value[2:4], 16), int(value[4:6], 16), int(value[6:8], 16))
+    raise ValueError(f'Unsupported background value: {value}')
 
-    cmd = [
-        'ffmpeg',
-        '-y',
-        '-i',
-        str(src_path),
-        '-vf',
-        vf,
-        '-frames:v',
-        '1',
-        str(dst_path),
-    ]
-    run(cmd)
+
+def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str) -> None:
+    bg = parse_background(background)
+    with Image.open(BytesIO(image_bytes)) as img:
+        img = ImageOps.exif_transpose(img)
+        img = img.convert('RGBA')
+        src_w, src_h = img.size
+        if src_w <= 0 or src_h <= 0:
+            raise ValueError('Invalid source image size')
+
+        scale = min(float(width) / float(src_w), float(height) / float(src_h))
+        fit_w = max(1, int(round(src_w * scale)))
+        fit_h = max(1, int(round(src_h * scale)))
+        resized = img.resize((fit_w, fit_h), Image.Resampling.LANCZOS)
+
+        canvas = Image.new('RGBA', (width, height), bg)
+        off_x = (width - fit_w) // 2
+        off_y = (height - fit_h) // 2
+        canvas.paste(resized, (off_x, off_y), resized)
+        canvas.save(dst_path, format='PNG')
 
 
 def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str) -> None:
@@ -288,7 +295,7 @@ def resolve_urls_from_manifest(raw_base: str, manifest: dict, include_portraits:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Build a video directly from a GitHub repo + roster_manifest.json.')
+    parser = argparse.ArgumentParser(description='Build a no-crop video from a GitHub repo + roster_manifest.json.')
     parser.add_argument('--repo-url', required=True)
     parser.add_argument('--manifest-url', default='')
     parser.add_argument('--output', required=True)
@@ -302,7 +309,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--width', type=int, default=1920)
     parser.add_argument('--height', type=int, default=1080)
     parser.add_argument('--background', default='black')
-    parser.add_argument('--fit-mode', choices=['contain', 'cover', 'stretch'], default='contain')
     parser.add_argument('--save-url-list', default='')
     parser.add_argument('--keep-workdir', action='store_true')
     args = parser.parse_args()
@@ -322,8 +328,8 @@ def main() -> int:
     print(f'Repo: {owner}/{repo}')
     print(f'Branch: {branch}')
     print(f'Manifest: {raw_manifest_url}')
-    print(f'Fit mode: {args.fit_mode}')
     print(f'Canvas: {args.width}x{args.height}')
+    print('Mode: PIL contain + pad (no crop)')
 
     try:
         manifest = json.loads(download_bytes(raw_manifest_url).decode('utf-8'))
@@ -349,20 +355,17 @@ def main() -> int:
     if args.save_url_list:
         Path(args.save_url_list).write_text('\n'.join(urls) + '\n', encoding='utf-8')
 
-    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_')
+    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_nocrop_pillow_')
     workdir = Path(workdir_obj.name)
-    download_dir = workdir / 'downloads'
     frames_dir = workdir / 'frames'
-    download_dir.mkdir(parents=True, exist_ok=True)
     frames_dir.mkdir(parents=True, exist_ok=True)
     print(f'Workdir: {workdir}')
 
     for idx, url in enumerate(urls):
-        download_path = download_dir / f'src_{idx:06d}'
         frame_path = frames_dir / f'frame_{idx + 1:06d}.png'
         try:
-            download_file(url, download_path)
-            ffmpeg_normalize(download_path, frame_path, args.width, args.height, args.background, args.fit_mode)
+            image_bytes = download_bytes(url)
+            normalize_image_contain(image_bytes, frame_path, args.width, args.height, args.background)
         except Exception as exc:
             print(f'Failed on {url}\n{exc}', file=sys.stderr)
             return 3
