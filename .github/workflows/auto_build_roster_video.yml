@@ -69,5 +69,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: rebuild roster video and publish manifest [skip ci]"
+          git commit -m "chore: rebuild roster video and publish manifest"
           git push
