@@ -194,6 +194,7 @@ def poster_dir_candidates(category: str) -> list[str]:
         'sideposter': ['side', 'sideposter', 'side_poster'],
         'backposter': ['back', 'backposter', 'back_poster'],
         'notice': ['notice'],
+        'notices': ['notice', 'notices'],
         'menu': ['menu', 'kanpe'],
         'kanpe': ['kanpe', 'menu'],
     }
@@ -213,11 +214,13 @@ def portrait_dir_candidates(category: str) -> list[str]:
         'uppercast': ['uppercast', 'upper_cast'],
         'downercast': ['downercast', 'downer_cast'],
         'condisionalcast': ['condisionalcast', 'conditionalcast', 'conditional_cast', 'condisional_cast'],
+        'conditionalcast': ['conditionalcast', 'condisionalcast', 'conditional_cast', 'condisional_cast'],
+        'guest': ['guest'],
     }
     return aliases.get(key, [key])
 
 
-def candidate_image_urls(raw_base: str, item: dict, include_portraits: bool, include_posters: bool) -> list[str]:
+def candidate_image_urls(raw_base: str, kind: str, item: dict) -> list[str]:
     out: list[str] = []
     slot = item.get('slot')
     category = str(item.get('category', '')).strip()
@@ -226,13 +229,12 @@ def candidate_image_urls(raw_base: str, item: dict, include_portraits: bool, inc
     slot_name = f'slot{slot}'
     exts = ['png', 'jpg', 'jpeg', 'webp']
 
-    if include_posters:
+    if kind == 'poster':
         for folder in poster_dir_candidates(category):
             for ext in exts:
                 out.append(f'{raw_base}images/posters/{folder}/{slot_name}.{ext}')
                 out.append(f'{raw_base}images/poster/{folder}/{slot_name}.{ext}')
-
-    if include_portraits:
+    else:
         for folder in portrait_dir_candidates(category):
             for ext in exts:
                 out.append(f'{raw_base}images/portraits/{folder}/{slot_name}.{ext}')
@@ -255,7 +257,9 @@ def manifest_entries(manifest: dict, include_portraits: bool, include_posters: b
                     continue
                 if not item.get('showPortrait', True):
                     continue
-                entries.append(item)
+                entry = dict(item)
+                entry['_kind'] = 'member'
+                entries.append(entry)
     if include_posters:
         posters = manifest.get('posters', [])
         if isinstance(posters, list):
@@ -264,38 +268,39 @@ def manifest_entries(manifest: dict, include_portraits: bool, include_posters: b
                     continue
                 if not item.get('enabled', False):
                     continue
-                entries.append(item)
+                entry = dict(item)
+                entry['_kind'] = 'poster'
+                entries.append(entry)
     return entries
 
 
-def resolve_urls_from_manifest(raw_base: str, manifest: dict, include_portraits: bool, include_posters: bool) -> tuple[list[str], list[str]]:
+def resolve_frame_entries_from_manifest(raw_base: str, manifest: dict, include_portraits: bool, include_posters: bool) -> tuple[list[dict], list[str]]:
     entries = manifest_entries(manifest, include_portraits, include_posters)
-    resolved: list[str] = []
+    resolved: list[dict] = []
     missing: list[str] = []
-    members = manifest.get('members', [])
-    posters = manifest.get('posters', [])
     for item in entries:
-        candidates = candidate_image_urls(
-            raw_base,
-            item,
-            include_portraits=True if item in members else False,
-            include_posters=True if item in posters else False,
-        )
+        kind = str(item.get('_kind', 'member'))
+        candidates = candidate_image_urls(raw_base, kind, item)
         found = None
         for candidate in candidates:
             if url_exists(candidate):
                 found = candidate
                 break
-        label = f"{item.get('category', '?')} slot={item.get('slot', '?')}"
+        label = f"{kind}|{item.get('category', '?')}|{item.get('slot', '?')}"
         if found is None:
             missing.append(label)
         else:
-            resolved.append(found)
-    return unique_preserve(resolved), missing
+            resolved.append({
+                'kind': kind,
+                'category': str(item.get('category', '')),
+                'slot': int(item.get('slot', 0)),
+                'url': found,
+            })
+    return resolved, missing
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Build a no-crop video from a GitHub repo + roster_manifest.json.')
+    parser = argparse.ArgumentParser(description='Build a no-crop video from a GitHub repo + roster_manifest.json and emit an exact frame map.')
     parser.add_argument('--repo-url', required=True)
     parser.add_argument('--manifest-url', default='')
     parser.add_argument('--output', required=True)
@@ -310,6 +315,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--height', type=int, default=1080)
     parser.add_argument('--background', default='black')
     parser.add_argument('--save-url-list', default='')
+    parser.add_argument('--frame-map-output', default='')
     parser.add_argument('--keep-workdir', action='store_true')
     args = parser.parse_args()
     if not args.include_posters and not args.include_portraits:
@@ -330,6 +336,7 @@ def main() -> int:
     print(f'Manifest: {raw_manifest_url}')
     print(f'Canvas: {args.width}x{args.height}')
     print('Mode: PIL contain + pad (no crop)')
+    print('Exact mapping: enabled')
 
     try:
         manifest = json.loads(download_bytes(raw_manifest_url).decode('utf-8'))
@@ -337,8 +344,8 @@ def main() -> int:
         print(f'Failed to read manifest: {exc}', file=sys.stderr)
         return 1
 
-    urls, missing = resolve_urls_from_manifest(raw_base, manifest, args.include_portraits, args.include_posters)
-    if not urls:
+    resolved_entries, missing = resolve_frame_entries_from_manifest(raw_base, manifest, args.include_portraits, args.include_posters)
+    if not resolved_entries:
         print('No image URLs resolved from manifest.', file=sys.stderr)
         if missing:
             print('Missing entries:', file=sys.stderr)
@@ -346,22 +353,33 @@ def main() -> int:
                 print(f'  - {item}', file=sys.stderr)
         return 2
 
-    print(f'Resolved images: {len(urls)}')
+    print(f'Resolved frames: {len(resolved_entries)}')
     if missing:
         print(f'Unresolved entries: {len(missing)}')
         for item in missing[:20]:
             print(f'MISS: {item}')
 
+    urls = [entry['url'] for entry in resolved_entries]
+
     if args.save_url_list:
         Path(args.save_url_list).write_text('\n'.join(urls) + '\n', encoding='utf-8')
 
-    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_nocrop_pillow_')
+    if args.frame_map_output:
+        lines: list[str] = []
+        for entry in resolved_entries:
+            lines.append(f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}")
+        Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_exactmap_')
     workdir = Path(workdir_obj.name)
     frames_dir = workdir / 'frames'
     frames_dir.mkdir(parents=True, exist_ok=True)
     print(f'Workdir: {workdir}')
 
-    for idx, url in enumerate(urls):
+    idx = 0
+    while idx < len(urls):
+        url = urls[idx]
         frame_path = frames_dir / f'frame_{idx + 1:06d}.png'
         try:
             image_bytes = download_bytes(url)
@@ -369,6 +387,7 @@ def main() -> int:
         except Exception as exc:
             print(f'Failed on {url}\n{exc}', file=sys.stderr)
             return 3
+        idx += 1
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
