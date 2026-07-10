@@ -130,7 +130,7 @@ def parse_background(value: str) -> tuple[int, int, int, int]:
     raise ValueError(f'Unsupported background value: {value}')
 
 
-def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str) -> None:
+def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str) -> dict:
     bg = parse_background(background)
     with Image.open(BytesIO(image_bytes)) as img:
         img = ImageOps.exif_transpose(img)
@@ -149,6 +149,17 @@ def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, heig
         off_y = (height - fit_h) // 2
         canvas.paste(resized, (off_x, off_y), resized)
         canvas.save(dst_path, format='PNG')
+
+        return {
+            'fit_w': fit_w,
+            'fit_h': fit_h,
+            'off_x_px': off_x,
+            'off_y_px': off_y,
+            'tiling_x': float(fit_w) / float(width),
+            'tiling_y': float(fit_h) / float(height),
+            'offset_x': float(off_x) / float(width),
+            'offset_y': float(height - fit_h - off_y) / float(height),
+        }
 
 
 def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str) -> None:
@@ -245,7 +256,7 @@ def candidate_image_urls(raw_base: str, kind: str, item: dict) -> list[str]:
     return unique_preserve(out)
 
 
-def manifest_entries(manifest: dict, include_portraits: bool, include_posters: bool) -> list[dict]:
+def manifest_entries(manifest: dict, include_portraits: bool, include_posters: bool, include_hidden_portraits: bool) -> list[dict]:
     entries: list[dict] = []
     if include_portraits:
         members = manifest.get('members', [])
@@ -255,10 +266,12 @@ def manifest_entries(manifest: dict, include_portraits: bool, include_posters: b
                     continue
                 if not item.get('enabled', False):
                     continue
-                if not item.get('showPortrait', True):
+                show_portrait = bool(item.get('showPortrait', True))
+                if (not include_hidden_portraits) and (not show_portrait):
                     continue
                 entry = dict(item)
                 entry['_kind'] = 'member'
+                entry['_showPortrait'] = show_portrait
                 entries.append(entry)
     if include_posters:
         posters = manifest.get('posters', [])
@@ -274,8 +287,8 @@ def manifest_entries(manifest: dict, include_portraits: bool, include_posters: b
     return entries
 
 
-def resolve_frame_entries_from_manifest(raw_base: str, manifest: dict, include_portraits: bool, include_posters: bool) -> tuple[list[dict], list[str]]:
-    entries = manifest_entries(manifest, include_portraits, include_posters)
+def resolve_frame_entries_from_manifest(raw_base: str, manifest: dict, include_portraits: bool, include_posters: bool, include_hidden_portraits: bool) -> tuple[list[dict], list[str]]:
+    entries = manifest_entries(manifest, include_portraits, include_posters, include_hidden_portraits)
     resolved: list[dict] = []
     missing: list[str] = []
     for item in entries:
@@ -316,6 +329,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--background', default='black')
     parser.add_argument('--save-url-list', default='')
     parser.add_argument('--frame-map-output', default='')
+    parser.add_argument('--include-hidden-portraits', action='store_true', default=True)
     parser.add_argument('--keep-workdir', action='store_true')
     args = parser.parse_args()
     if not args.include_posters and not args.include_portraits:
@@ -344,7 +358,7 @@ def main() -> int:
         print(f'Failed to read manifest: {exc}', file=sys.stderr)
         return 1
 
-    resolved_entries, missing = resolve_frame_entries_from_manifest(raw_base, manifest, args.include_portraits, args.include_posters)
+    resolved_entries, missing = resolve_frame_entries_from_manifest(raw_base, manifest, args.include_portraits, args.include_posters, args.include_hidden_portraits)
     if not resolved_entries:
         print('No image URLs resolved from manifest.', file=sys.stderr)
         if missing:
@@ -364,14 +378,7 @@ def main() -> int:
     if args.save_url_list:
         Path(args.save_url_list).write_text('\n'.join(urls) + '\n', encoding='utf-8')
 
-    if args.frame_map_output:
-        lines: list[str] = []
-        for entry in resolved_entries:
-            lines.append(f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}")
-        Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
-        Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
-
-    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_exactmap_')
+    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_exactuv_')
     workdir = Path(workdir_obj.name)
     frames_dir = workdir / 'frames'
     frames_dir.mkdir(parents=True, exist_ok=True)
@@ -383,11 +390,21 @@ def main() -> int:
         frame_path = frames_dir / f'frame_{idx + 1:06d}.png'
         try:
             image_bytes = download_bytes(url)
-            normalize_image_contain(image_bytes, frame_path, args.width, args.height, args.background)
+            uv_info = normalize_image_contain(image_bytes, frame_path, args.width, args.height, args.background)
+            resolved_entries[idx].update(uv_info)
         except Exception as exc:
             print(f'Failed on {url}\n{exc}', file=sys.stderr)
             return 3
         idx += 1
+
+    if args.frame_map_output:
+        lines: list[str] = []
+        for entry in resolved_entries:
+            lines.append(
+                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}"
+            )
+        Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
