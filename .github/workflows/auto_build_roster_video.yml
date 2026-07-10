@@ -1,4 +1,4 @@
-name: Build roster video exact map
+name: Build roster video exact uv
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
     paths:
       - 'data/roster_manifest.json'
       - 'images/**'
-      - 'github_manifest_to_video_exactmap.py'
-      - '.github/workflows/auto_build_roster_video_exactmap.yml'
+      - 'github_manifest_to_video_exactuv.py'
+      - '.github/workflows/auto_build_roster_video_exactuv.yml'
   workflow_dispatch:
 
 permissions:
@@ -47,7 +47,7 @@ jobs:
       - name: Build mp4 and exact frame map
         run: |
           mkdir -p docs/videos docs/data
-          python github_manifest_to_video_exactmap.py             --repo-url "https://github.com/${{ github.repository }}/"             --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json"             --output "docs/videos/roster.mp4"             --frame-map-output "docs/data/roster_frame_map.txt"             --save-url-list "docs/data/roster_resolved_urls.txt"             --include-posters             --include-portraits             --fps 30             --crf 10             --gop 1
+          python github_manifest_to_video_exactuv.py             --repo-url "https://github.com/${{ github.repository }}/"             --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json"             --output "docs/videos/roster.mp4"             --frame-map-output "docs/data/roster_frame_map.txt"             --save-url-list "docs/data/roster_resolved_urls.txt"             --include-posters             --include-portraits             --fps 30             --crf 10             --gop 1
 
       - name: Commit generated files
         run: |
@@ -61,5 +61,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: rebuild roster video exact map"
+          git commit -m "chore: rebuild roster video exact uv"
           git push
