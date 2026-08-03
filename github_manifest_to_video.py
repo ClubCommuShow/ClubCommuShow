@@ -138,7 +138,6 @@ def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, heig
         src_w, src_h = img.size
         if src_w <= 0 or src_h <= 0:
             raise ValueError('Invalid source image size')
-
         scale = min(float(width) / float(src_w), float(height) / float(src_h))
         fit_w = max(1, int(round(src_w * scale)))
         fit_h = max(1, int(round(src_h * scale)))
@@ -149,7 +148,6 @@ def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, heig
         off_y = (height - fit_h) // 2
         canvas.paste(resized, (off_x, off_y), resized)
         canvas.save(dst_path, format='PNG')
-
         return {
             'fit_w': fit_w,
             'fit_h': fit_h,
@@ -162,14 +160,34 @@ def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, heig
         }
 
 
-def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str) -> None:
+def page_input_framerate(seconds_per_page: float) -> str:
+    if seconds_per_page <= 0.001:
+        seconds_per_page = 1.0
+    rounded = round(seconds_per_page)
+    if abs(seconds_per_page - float(rounded)) < 0.000001 and rounded >= 1:
+        return f'1/{rounded}'
+    return f'{1.0 / seconds_per_page:.8f}'
+
+
+def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str, seconds_per_page: float) -> None:
+    if seconds_per_page <= 0.001:
+        seconds_per_page = 1.0
+    if fps < 1:
+        fps = 30
+    if gop < 1:
+        gop = max(1, int(round(float(fps) * seconds_per_page)))
+
     cmd = [
         'ffmpeg',
         '-y',
         '-framerate',
-        str(fps),
+        page_input_framerate(seconds_per_page),
+        '-start_number',
+        '1',
         '-i',
         str(frames_dir / 'frame_%06d.png'),
+        '-r',
+        str(fps),
         '-c:v',
         codec,
         '-pix_fmt',
@@ -178,6 +196,10 @@ def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, 
         str(crf),
         '-g',
         str(gop),
+        '-force_key_frames',
+        f'expr:gte(t,n_forced*{seconds_per_page:.6f})',
+        '-tune',
+        'stillimage',
         '-an',
         '-movflags',
         '+faststart',
@@ -239,7 +261,6 @@ def candidate_image_urls(raw_base: str, kind: str, item: dict) -> list[str]:
         return out
     slot_name = f'slot{slot}'
     exts = ['png', 'jpg', 'jpeg', 'webp']
-
     if kind == 'poster':
         for folder in poster_dir_candidates(category):
             for ext in exts:
@@ -313,7 +334,7 @@ def resolve_frame_entries_from_manifest(raw_base: str, manifest: dict, include_p
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Build a no-crop video from a GitHub repo + roster_manifest.json and emit an exact frame map.')
+    parser = argparse.ArgumentParser(description='Build a one-second-per-page roster video from GitHub images and emit a matching frame map.')
     parser.add_argument('--repo-url', required=True)
     parser.add_argument('--manifest-url', default='')
     parser.add_argument('--output', required=True)
@@ -321,8 +342,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--include-posters', action='store_true')
     parser.add_argument('--include-portraits', action='store_true')
     parser.add_argument('--fps', type=int, default=30)
-    parser.add_argument('--crf', type=int, default=10)
-    parser.add_argument('--gop', type=int, default=1)
+    parser.add_argument('--seconds-per-page', type=float, default=1.0)
+    parser.add_argument('--crf', type=int, default=16)
+    parser.add_argument('--gop', type=int, default=0)
     parser.add_argument('--codec', default='libx264')
     parser.add_argument('--width', type=int, default=1920)
     parser.add_argument('--height', type=int, default=1080)
@@ -344,13 +366,11 @@ def main() -> int:
     raw_base = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/'
     manifest_source = args.manifest_url.strip() or f'https://github.com/{owner}/{repo}/blob/{branch}/data/roster_manifest.json'
     raw_manifest_url = to_raw_manifest_url(manifest_source, args.branch)
-
     print(f'Repo: {owner}/{repo}')
     print(f'Branch: {branch}')
     print(f'Manifest: {raw_manifest_url}')
     print(f'Canvas: {args.width}x{args.height}')
-    print('Mode: PIL contain + pad (no crop)')
-    print('Exact mapping: enabled')
+    print(f'Mode: one-second-page / contain + pad / fps={args.fps} / seconds_per_page={args.seconds_per_page}')
 
     try:
         manifest = json.loads(download_bytes(raw_manifest_url).decode('utf-8'))
@@ -367,7 +387,8 @@ def main() -> int:
                 print(f'  - {item}', file=sys.stderr)
         return 2
 
-    print(f'Resolved frames: {len(resolved_entries)}')
+    print(f'Resolved pages: {len(resolved_entries)}')
+    print(f'Expected duration: {len(resolved_entries) * args.seconds_per_page:.3f}s')
     if missing:
         print(f'Unresolved entries: {len(missing)}')
         for item in missing[:20]:
@@ -376,9 +397,10 @@ def main() -> int:
     urls = [entry['url'] for entry in resolved_entries]
 
     if args.save_url_list:
+        Path(args.save_url_list).parent.mkdir(parents=True, exist_ok=True)
         Path(args.save_url_list).write_text('\n'.join(urls) + '\n', encoding='utf-8')
 
-    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_exactuv_')
+    workdir_obj = tempfile.TemporaryDirectory(prefix='github_manifest_to_video_page_')
     workdir = Path(workdir_obj.name)
     frames_dir = workdir / 'frames'
     frames_dir.mkdir(parents=True, exist_ok=True)
@@ -392,6 +414,8 @@ def main() -> int:
             image_bytes = download_bytes(url)
             uv_info = normalize_image_contain(image_bytes, frame_path, args.width, args.height, args.background)
             resolved_entries[idx].update(uv_info)
+            resolved_entries[idx]['page'] = idx
+            resolved_entries[idx]['sample_time'] = float(idx) * args.seconds_per_page + (args.seconds_per_page * 0.5)
         except Exception as exc:
             print(f'Failed on {url}\n{exc}', file=sys.stderr)
             return 3
@@ -401,7 +425,7 @@ def main() -> int:
         lines: list[str] = []
         for entry in resolved_entries:
             lines.append(
-                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}"
+                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}|page={entry.get('page', 0)}|sample={entry.get('sample_time', 0.5):.3f}"
             )
         Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
         Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
@@ -409,7 +433,7 @@ def main() -> int:
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     try:
-        ffmpeg_build_video(frames_dir, output_path, args.fps, args.crf, args.gop, args.codec)
+        ffmpeg_build_video(frames_dir, output_path, args.fps, args.crf, args.gop, args.codec, args.seconds_per_page)
     except Exception as exc:
         print(f'Failed to build video\n{exc}', file=sys.stderr)
         return 4
