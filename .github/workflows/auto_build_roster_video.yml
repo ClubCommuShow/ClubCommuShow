@@ -1,4 +1,4 @@
-name: Build roster video exact uv
+name: Build roster video one second page
 
 on:
   push:
@@ -39,27 +39,45 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Copy manifest for Pages
+      - name: Build one-second-page mp4 and frame map
         run: |
-          mkdir -p docs/data
-          cp data/roster_manifest.json docs/data/roster_manifest.json
+          mkdir -p videos data docs/videos docs/data
+          python github_manifest_to_video.py \
+            --repo-url "https://github.com/${{ github.repository }}/" \
+            --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json" \
+            --output "videos/roster.mp4" \
+            --frame-map-output "data/roster_frame_map.txt" \
+            --save-url-list "data/roster_resolved_urls.txt" \
+            --include-posters \
+            --include-portraits \
+            --fps 30 \
+            --seconds-per-page 1 \
+            --crf 16 \
+            --gop 30
 
-      - name: Build mp4 and exact frame map
-        run: |
-          mkdir -p docs/videos docs/data
-          python github_manifest_to_video.py             --repo-url "https://github.com/${{ github.repository }}/"             --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json"             --output "docs/videos/roster.mp4"             --frame-map-output "docs/data/roster_frame_map.txt"             --save-url-list "docs/data/roster_resolved_urls.txt"             --include-posters             --include-portraits             --fps 30             --crf 10             --gop 1
+          cp data/roster_manifest.json docs/data/roster_manifest.json
+          cp data/roster_frame_map.txt docs/data/roster_frame_map.txt
+          cp data/roster_resolved_urls.txt docs/data/roster_resolved_urls.txt
+          cp videos/roster.mp4 docs/videos/roster.mp4
 
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add docs/videos/roster.mp4 docs/data/roster_manifest.json docs/data/roster_frame_map.txt docs/data/roster_resolved_urls.txt
+          git add \
+            videos/roster.mp4 \
+            data/roster_frame_map.txt \
+            data/roster_resolved_urls.txt \
+            docs/videos/roster.mp4 \
+            docs/data/roster_manifest.json \
+            docs/data/roster_frame_map.txt \
+            docs/data/roster_resolved_urls.txt
 
           if git diff --cached --quiet; then
             echo "No changes in generated files"
             exit 0
           fi
 
-          git commit -m "chore: rebuild roster video exact uv"
+          git commit -m "chore: rebuild roster video one second page"
           git push
