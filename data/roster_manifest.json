@@ -145,7 +145,7 @@
     },
     {
       "enabled": true,
-      "name": "我愛鳴蕩＠がーねっと",
+      "name": "ひなしー",
       "category": "Staff",
       "slot": 3,
       "spawnKey": "staff_room",
@@ -156,7 +156,7 @@
     },
     {
       "enabled": true,
-      "name": "ひなしー",
+      "name": "し ゃ ち",
       "category": "Staff",
       "slot": 4,
       "spawnKey": "staff_room",
@@ -167,20 +167,9 @@
     },
     {
       "enabled": true,
-      "name": "し ゃ ち",
-      "category": "Staff",
-      "slot": 5,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
       "name": "Yoshi33563",
       "category": "Staff",
-      "slot": 6,
+      "slot": 5,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
@@ -288,7 +277,7 @@
     },
     {
       "enabled": true,
-      "name": "なこった",
+      "name": "yuu3k",
       "category": "UpperCast",
       "slot": 8,
       "spawnKey": "staff_room",
@@ -299,20 +288,9 @@
     },
     {
       "enabled": true,
-      "name": "yuu3k",
-      "category": "UpperCast",
-      "slot": 9,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
       "name": "かざき_りわと",
       "category": "UpperCast",
-      "slot": 10,
+      "slot": 9,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
