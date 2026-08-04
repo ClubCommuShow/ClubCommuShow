@@ -52,6 +52,7 @@ jobs:
             --include-portraits \
             --fps 30 \
             --seconds-per-page 1 \
+            --resize-mode stretch \
             --crf 16 \
             --gop 30
 
