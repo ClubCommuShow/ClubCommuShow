@@ -160,6 +160,35 @@ def normalize_image_contain(image_bytes: bytes, dst_path: Path, width: int, heig
         }
 
 
+def normalize_image_stretch(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str) -> dict:
+    with Image.open(BytesIO(image_bytes)) as img:
+        img = ImageOps.exif_transpose(img)
+        img = img.convert('RGBA')
+        src_w, src_h = img.size
+        if src_w <= 0 or src_h <= 0:
+            raise ValueError('Invalid source image size')
+
+        resized = img.resize((width, height), Image.Resampling.LANCZOS)
+        resized.save(dst_path, format='PNG')
+        return {
+            'fit_w': width,
+            'fit_h': height,
+            'off_x_px': 0,
+            'off_y_px': 0,
+            'tiling_x': 1.0,
+            'tiling_y': 1.0,
+            'offset_x': 0.0,
+            'offset_y': 0.0,
+        }
+
+
+def normalize_image_to_video_frame(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str, resize_mode: str) -> dict:
+    mode = resize_mode.strip().lower()
+    if mode == 'stretch':
+        return normalize_image_stretch(image_bytes, dst_path, width, height, background)
+    return normalize_image_contain(image_bytes, dst_path, width, height, background)
+
+
 def page_input_framerate(seconds_per_page: float) -> str:
     if seconds_per_page <= 0.001:
         seconds_per_page = 1.0
@@ -349,6 +378,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--width', type=int, default=1920)
     parser.add_argument('--height', type=int, default=1080)
     parser.add_argument('--background', default='black')
+    parser.add_argument('--resize-mode', choices=['contain', 'stretch'], default='stretch')
     parser.add_argument('--save-url-list', default='')
     parser.add_argument('--frame-map-output', default='')
     parser.add_argument('--include-hidden-portraits', action='store_true', default=True)
@@ -370,7 +400,7 @@ def main() -> int:
     print(f'Branch: {branch}')
     print(f'Manifest: {raw_manifest_url}')
     print(f'Canvas: {args.width}x{args.height}')
-    print(f'Mode: one-second-page / contain + pad / fps={args.fps} / seconds_per_page={args.seconds_per_page}')
+    print(f'Mode: one-second-page / resize={args.resize_mode} / fps={args.fps} / seconds_per_page={args.seconds_per_page}')
 
     try:
         manifest = json.loads(download_bytes(raw_manifest_url).decode('utf-8'))
@@ -412,7 +442,7 @@ def main() -> int:
         frame_path = frames_dir / f'frame_{idx + 1:06d}.png'
         try:
             image_bytes = download_bytes(url)
-            uv_info = normalize_image_contain(image_bytes, frame_path, args.width, args.height, args.background)
+            uv_info = normalize_image_to_video_frame(image_bytes, frame_path, args.width, args.height, args.background, args.resize_mode)
             resolved_entries[idx].update(uv_info)
             resolved_entries[idx]['page'] = idx
             resolved_entries[idx]['sample_time'] = float(idx) * args.seconds_per_page + (args.seconds_per_page * 0.5)
