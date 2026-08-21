@@ -211,17 +211,6 @@
     },
     {
       "enabled": true,
-      "name": "くれい！",
-      "category": "UpperCast",
-      "slot": 2,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
       "name": "クドウ_",
       "category": "UpperCast",
       "slot": 3,
@@ -255,17 +244,6 @@
     },
     {
       "enabled": true,
-      "name": "さくりす",
-      "category": "UpperCast",
-      "slot": 6,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
       "name": "みも77",
       "category": "UpperCast",
       "slot": 7,
@@ -277,31 +255,9 @@
     },
     {
       "enabled": true,
-      "name": "yuu3k",
-      "category": "UpperCast",
-      "slot": 8,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
       "name": "かざき_りわと",
       "category": "UpperCast",
       "slot": 9,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
-      "name": "ぼろだ。",
-      "category": "DownerCast",
-      "slot": 0,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
@@ -412,17 +368,6 @@
       "name": "プニキ（Aspire_K4）",
       "category": "CondisionalCast",
       "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true
-    },
-    {
-      "enabled": true,
-      "name": "しれん_",
-      "category": "CondisionalCast",
-      "slot": 1,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
