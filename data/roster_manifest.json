@@ -332,7 +332,7 @@
     },
     {
       "enabled": true,
-      "name": "おろし生姜",
+      "name": "yuki_snow8",
       "category": "DownerCast",
       "slot": 6,
       "spawnKey": "staff_room",
@@ -343,7 +343,7 @@
     },
     {
       "enabled": true,
-      "name": "yuki_snow8",
+      "name": "おろし生姜",
       "category": "DownerCast",
       "slot": 7,
       "spawnKey": "staff_room",
