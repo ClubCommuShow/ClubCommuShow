@@ -1,0 +1,128 @@
+name: Build roster video one second page
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/roster_manifest.json'
+      - 'images/**'
+      - 'github_manifest_to_video.py'
+      - '.github/workflows/auto_build_roster_video.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: roster-video-build-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-video:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pillow
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Build one-second-page mp4 and frame map
+        run: |
+          mkdir -p videos data docs/videos docs/data
+          python github_manifest_to_video.py \
+            --repo-url "https://github.com/${{ github.repository }}/" \
+            --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json" \
+            --output "videos/roster.mp4" \
+            --frame-map-output "data/roster_frame_map.txt" \
+            --save-url-list "data/roster_resolved_urls.txt" \
+            --include-posters \
+            --include-portraits \
+            --fps 30 \
+            --seconds-per-page 1 \
+            --resize-mode stretch \
+            --crf 16 \
+            --gop 30
+
+          cp data/roster_manifest.json docs/data/roster_manifest.json
+          cp data/roster_frame_map.txt docs/data/roster_frame_map.txt
+          cp data/roster_resolved_urls.txt docs/data/roster_resolved_urls.txt
+          cp videos/roster.mp4 docs/videos/roster.mp4
+
+      - name: Commit generated files safely
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          tmpdir="$(mktemp -d)"
+          mkdir -p "$tmpdir/videos" "$tmpdir/data" "$tmpdir/docs/videos" "$tmpdir/docs/data"
+
+          cp videos/roster.mp4 "$tmpdir/videos/roster.mp4"
+          cp data/roster_frame_map.txt "$tmpdir/data/roster_frame_map.txt"
+          cp data/roster_resolved_urls.txt "$tmpdir/data/roster_resolved_urls.txt"
+          cp docs/videos/roster.mp4 "$tmpdir/docs/videos/roster.mp4"
+          cp docs/data/roster_manifest.json "$tmpdir/docs/data/roster_manifest.json"
+          cp docs/data/roster_frame_map.txt "$tmpdir/docs/data/roster_frame_map.txt"
+          cp docs/data/roster_resolved_urls.txt "$tmpdir/docs/data/roster_resolved_urls.txt"
+
+          for i in 1 2 3 4 5; do
+            echo "Safe push attempt $i"
+
+            # 毎回、GitHub上の最新mainに合わせ直してから生成ファイルだけ戻す。
+            git fetch origin main
+            git reset --hard origin/main
+
+            mkdir -p videos data docs/videos docs/data
+            cp "$tmpdir/videos/roster.mp4" videos/roster.mp4
+            cp "$tmpdir/data/roster_frame_map.txt" data/roster_frame_map.txt
+            cp "$tmpdir/data/roster_resolved_urls.txt" data/roster_resolved_urls.txt
+            cp "$tmpdir/docs/videos/roster.mp4" docs/videos/roster.mp4
+            cp "$tmpdir/docs/data/roster_manifest.json" docs/data/roster_manifest.json
+            cp "$tmpdir/docs/data/roster_frame_map.txt" docs/data/roster_frame_map.txt
+            cp "$tmpdir/docs/data/roster_resolved_urls.txt" docs/data/roster_resolved_urls.txt
+
+            git add \
+              videos/roster.mp4 \
+              data/roster_frame_map.txt \
+              data/roster_resolved_urls.txt \
+              docs/videos/roster.mp4 \
+              docs/data/roster_manifest.json \
+              docs/data/roster_frame_map.txt \
+              docs/data/roster_resolved_urls.txt
+
+            if git diff --cached --quiet; then
+              echo "No changes in generated files"
+              exit 0
+            fi
+
+            git commit -m "chore: rebuild roster video one second page"
+
+            if git push origin HEAD:main; then
+              echo "Push succeeded"
+              exit 0
+            fi
+
+            echo "Push failed, retrying after refetch"
+            sleep 5
+          done
+
+          echo "Push failed after retries"
+          exit 1
