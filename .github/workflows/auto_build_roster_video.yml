@@ -26,7 +26,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -69,6 +71,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # Build中にmainが進んだ場合に備えて、生成ファイルをautostashしつつ最新mainへ合わせる。
+          # ここをgit addより前に置くと、生成物の差分を保ったままnon-fast-forwardを避けやすい。
+          git pull --rebase --autostash origin main
+
           git add \
             videos/roster.mp4 \
             data/roster_frame_map.txt \
@@ -85,7 +91,16 @@ jobs:
 
           git commit -m "chore: rebuild roster video one second page"
 
-          # 他のpushや別Actionのbot commitが先にmainへ入っていると、
-          # non-fast-forwardでpushが弾かれるため、最新mainへrebaseしてからpushする。
-          git pull --rebase --autostash origin main
-          git push
+          # push直前にもmainが進むことがあるので、最大3回までrebase→pushを試す。
+          for i in 1 2 3; do
+            echo "Push attempt $i"
+            git pull --rebase --autostash origin main
+            if git push origin HEAD:main; then
+              echo "Push succeeded"
+              exit 0
+            fi
+            sleep 5
+          done
+
+          echo "Push failed after retries"
+          exit 1
