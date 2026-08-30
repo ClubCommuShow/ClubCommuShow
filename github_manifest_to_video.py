@@ -12,7 +12,7 @@ from io import BytesIO
 from pathlib import Path
 from typing import Iterable
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageDraw
 
 
 def run(cmd: list[str]) -> None:
@@ -167,7 +167,6 @@ def normalize_image_stretch(image_bytes: bytes, dst_path: Path, width: int, heig
         src_w, src_h = img.size
         if src_w <= 0 or src_h <= 0:
             raise ValueError('Invalid source image size')
-
         resized = img.resize((width, height), Image.Resampling.LANCZOS)
         resized.save(dst_path, format='PNG')
         return {
@@ -182,11 +181,49 @@ def normalize_image_stretch(image_bytes: bytes, dst_path: Path, width: int, heig
         }
 
 
-def normalize_image_to_video_frame(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str, resize_mode: str) -> dict:
-    mode = resize_mode.strip().lower()
-    if mode == 'stretch':
+def normalize_image_selected(image_bytes: bytes, dst_path: Path, width: int, height: int, background: str, resize_mode: str) -> dict:
+    if resize_mode == 'stretch':
         return normalize_image_stretch(image_bytes, dst_path, width, height, background)
     return normalize_image_contain(image_bytes, dst_path, width, height, background)
+
+
+def create_placeholder_frame(dst_path: Path, width: int, height: int, background: str, label: str, url: str, reason: str) -> dict:
+    bg = parse_background(background)
+    # transparent / none は動画化時に黒へ寄りやすいので、診断用placeholderは暗い不透明背景にする。
+    if bg[3] < 255:
+        bg = (0, 0, 0, 255)
+
+    canvas = Image.new('RGBA', (width, height), bg)
+    draw = ImageDraw.Draw(canvas)
+    text_lines = [
+        'BAD IMAGE PLACEHOLDER',
+        label,
+        reason[:140],
+        url[:180],
+    ]
+
+    x = max(24, width // 32)
+    y = max(24, height // 16)
+    line_h = max(24, height // 28)
+
+    # 文字はPillow標準フォント。GitHub Actions上でも追加フォントなしで動く。
+    i = 0
+    while i < len(text_lines):
+        draw.text((x, y + (line_h * i)), text_lines[i], fill=(255, 80, 80, 255))
+        i += 1
+
+    canvas.save(dst_path, format='PNG')
+    return {
+        'fit_w': width,
+        'fit_h': height,
+        'off_x_px': 0,
+        'off_y_px': 0,
+        'tiling_x': 1.0,
+        'tiling_y': 1.0,
+        'offset_x': 0.0,
+        'offset_y': 0.0,
+        'bad_image': 1,
+    }
 
 
 def page_input_framerate(seconds_per_page: float) -> str:
@@ -272,6 +309,8 @@ def portrait_dir_candidates(category: str) -> list[str]:
         'assistant': ['assistant'],
         'staffleader': ['staffleader', 'staff_leader'],
         'staff': ['staff'],
+        'switchcastcategory': ['switchcastcategory', 'switch_cast_category', 'switchcast', 'switch_cast'],
+        'switchcast': ['switchcast', 'switch_cast', 'switchcastcategory', 'switch_cast_category'],
         'castleader': ['castleader', 'cast_leader'],
         'uppercast': ['uppercast', 'upper_cast'],
         'downercast': ['downercast', 'downer_cast'],
@@ -378,7 +417,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--width', type=int, default=1920)
     parser.add_argument('--height', type=int, default=1080)
     parser.add_argument('--background', default='black')
-    parser.add_argument('--resize-mode', choices=['contain', 'stretch'], default='stretch')
+    parser.add_argument('--resize-mode', choices=['contain', 'stretch'], default='contain')
+    parser.add_argument('--bad-image-mode', choices=['fail', 'placeholder', 'skip'], default='placeholder')
     parser.add_argument('--save-url-list', default='')
     parser.add_argument('--frame-map-output', default='')
     parser.add_argument('--include-hidden-portraits', action='store_true', default=True)
@@ -436,26 +476,57 @@ def main() -> int:
     frames_dir.mkdir(parents=True, exist_ok=True)
     print(f'Workdir: {workdir}')
 
-    idx = 0
-    while idx < len(urls):
-        url = urls[idx]
-        frame_path = frames_dir / f'frame_{idx + 1:06d}.png'
+    processed_entries: list[dict] = []
+    bad_images: list[str] = []
+    source_idx = 0
+    frame_idx = 0
+    while source_idx < len(resolved_entries):
+        entry = resolved_entries[source_idx]
+        url = entry['url']
+        label = f"{entry.get('kind', '?')}|{entry.get('category', '?')}|{entry.get('slot', '?')}"
+        frame_path = frames_dir / f'frame_{frame_idx + 1:06d}.png'
         try:
             image_bytes = download_bytes(url)
-            uv_info = normalize_image_to_video_frame(image_bytes, frame_path, args.width, args.height, args.background, args.resize_mode)
-            resolved_entries[idx].update(uv_info)
-            resolved_entries[idx]['page'] = idx
-            resolved_entries[idx]['sample_time'] = float(idx) * args.seconds_per_page + (args.seconds_per_page * 0.5)
+            uv_info = normalize_image_selected(image_bytes, frame_path, args.width, args.height, args.background, args.resize_mode)
         except Exception as exc:
-            print(f'Failed on {url}\n{exc}', file=sys.stderr)
-            return 3
-        idx += 1
+            bad_label = f'{label} -> {url} -> {exc}'
+            bad_images.append(bad_label)
+            print(f'BAD_IMAGE: {bad_label}', file=sys.stderr)
+
+            if args.bad_image_mode == 'fail':
+                print(f'Failed on {url}\n{exc}', file=sys.stderr)
+                return 3
+
+            if args.bad_image_mode == 'skip':
+                source_idx += 1
+                continue
+
+            uv_info = create_placeholder_frame(frame_path, args.width, args.height, args.background, label, url, str(exc))
+
+        entry.update(uv_info)
+        entry['page'] = frame_idx
+        entry['sample_time'] = float(frame_idx) * args.seconds_per_page + (args.seconds_per_page * 0.5)
+        processed_entries.append(entry)
+
+        source_idx += 1
+        frame_idx += 1
+
+    resolved_entries = processed_entries
+
+    if not resolved_entries:
+        print('No valid or placeholder frames were generated.', file=sys.stderr)
+        return 3
+
+    if bad_images:
+        print(f'Bad image entries: {len(bad_images)}')
+        for item in bad_images[:20]:
+            print(f'BAD: {item}')
 
     if args.frame_map_output:
         lines: list[str] = []
         for entry in resolved_entries:
             lines.append(
-                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}|page={entry.get('page', 0)}|sample={entry.get('sample_time', 0.5):.3f}"
+                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}|page={entry.get('page', 0)}|sample={entry.get('sample_time', 0.5):.3f}|bad={entry.get('bad_image', 0)}" 
             )
         Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
         Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
