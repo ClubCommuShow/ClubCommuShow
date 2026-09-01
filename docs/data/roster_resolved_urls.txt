@@ -12,7 +12,6 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portra
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot2.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot3.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot4.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot5.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/castleader/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/castleader/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/uppercast/slot0.png
