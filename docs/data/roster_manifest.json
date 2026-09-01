@@ -8,7 +8,7 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
+      "showName": true,
       "showPortrait": true
     },
     {
