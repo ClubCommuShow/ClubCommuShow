@@ -68,6 +68,17 @@
     },
     {
       "enabled": true,
+      "name": "ごまもっち",
+      "category": "Operator",
+      "slot": 3,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
       "name": "rokyodragon",
       "category": "Assistant",
       "slot": 0,
@@ -178,9 +189,75 @@
     },
     {
       "enabled": true,
+      "name": "urumof",
+      "category": "Staff",
+      "slot": 6,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "ほしあい",
+      "category": "Staff",
+      "slot": 7,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "みのりんご",
+      "category": "Staff",
+      "slot": 8,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "マルヒ_Secretary",
+      "category": "SwitchCast",
+      "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "Mortar_217",
+      "category": "SwitchCast",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
       "name": "ずっと揺れていたい。",
       "category": "CastLeader",
       "slot": 0,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "まぼまぼ",
+      "category": "CastLeader",
+      "slot": 1,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
@@ -200,7 +277,7 @@
     },
     {
       "enabled": true,
-      "name": "ごまもっち",
+      "name": "青染るの",
       "category": "UpperCast",
       "slot": 1,
       "spawnKey": "staff_room",
@@ -211,7 +288,7 @@
     },
     {
       "enabled": true,
-      "name": "クドウ_",
+      "name": "でらまん",
       "category": "UpperCast",
       "slot": 2,
       "spawnKey": "staff_room",
@@ -222,7 +299,7 @@
     },
     {
       "enabled": true,
-      "name": "青染るの",
+      "name": "みも77",
       "category": "UpperCast",
       "slot": 3,
       "spawnKey": "staff_room",
@@ -233,7 +310,7 @@
     },
     {
       "enabled": true,
-      "name": "でらまん",
+      "name": "かざき_りわと",
       "category": "UpperCast",
       "slot": 4,
       "spawnKey": "staff_room",
@@ -244,25 +321,36 @@
     },
     {
       "enabled": true,
-      "name": "みも77",
+      "name": "ASU_1115",
       "category": "UpperCast",
       "slot": 5,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": true,
-      "showPortrait": true
+      "showName": false,
+      "showPortrait": false
     },
     {
       "enabled": true,
-      "name": "かざき_りわと",
+      "name": "おおかな",
       "category": "UpperCast",
-      "slot": 6,
+      "slot": 4,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": true,
-      "showPortrait": true
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "AmakazeRin",
+      "category": "UpperCast",
+      "slot": 5,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
     },
     {
       "enabled": true,
@@ -277,7 +365,7 @@
     },
     {
       "enabled": true,
-      "name": "まぼまぼ",
+      "name": "まもなか",
       "category": "DownerCast",
       "slot": 1,
       "spawnKey": "staff_room",
@@ -288,7 +376,7 @@
     },
     {
       "enabled": true,
-      "name": "まもなか",
+      "name": "なす_；",
       "category": "DownerCast",
       "slot": 2,
       "spawnKey": "staff_room",
@@ -299,7 +387,7 @@
     },
     {
       "enabled": true,
-      "name": "なす_；",
+      "name": "笠っち0123",
       "category": "DownerCast",
       "slot": 3,
       "spawnKey": "staff_room",
@@ -310,7 +398,7 @@
     },
     {
       "enabled": true,
-      "name": "冬野しぐれ",
+      "name": "yuki_snow8",
       "category": "DownerCast",
       "slot": 4,
       "spawnKey": "staff_room",
@@ -321,7 +409,7 @@
     },
     {
       "enabled": true,
-      "name": "笠っち0123",
+      "name": "おろし生姜",
       "category": "DownerCast",
       "slot": 5,
       "spawnKey": "staff_room",
@@ -332,7 +420,7 @@
     },
     {
       "enabled": true,
-      "name": "yuki_snow8",
+      "name": "aster_oct",
       "category": "DownerCast",
       "slot": 6,
       "spawnKey": "staff_room",
@@ -343,25 +431,69 @@
     },
     {
       "enabled": true,
-      "name": "おろし生姜",
+      "name": "うにお_cxq",
       "category": "DownerCast",
       "slot": 7,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": true,
-      "showPortrait": true
+      "showName": false,
+      "showPortrait": false
     },
     {
       "enabled": true,
-      "name": "aster_oct",
+      "name": "桜琳あむ",
       "category": "DownerCast",
       "slot": 8,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": true,
-      "showPortrait": true
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "ケイバス",
+      "category": "DownerCast",
+      "slot": 9,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "てれてれほわいと",
+      "category": "DownerCast",
+      "slot": 10,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "kamenno_megia",
+      "category": "DownerCast",
+      "slot": 11,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "ZERONOSU",
+      "category": "DownerCast",
+      "slot": 12,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
     },
     {
       "enabled": true,
@@ -373,6 +505,28 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true
+    },
+    {
+      "enabled": true,
+      "name": "ごえさん",
+      "category": "CondisionalCast",
+      "slot": 1,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
+    },
+    {
+      "enabled": true,
+      "name": "錆びた鯖",
+      "category": "CondisionalCast",
+      "slot": 2,
+      "spawnKey": "staff_room",
+      "hasPermission": true,
+      "showArmband": true,
+      "showName": false,
+      "showPortrait": false
     }
   ],
   "posters": [
