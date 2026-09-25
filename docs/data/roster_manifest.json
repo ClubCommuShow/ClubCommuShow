@@ -189,36 +189,25 @@
     },
     {
       "enabled": true,
-      "name": "urumof",
+      "name": "ほしあい",
       "category": "Staff",
       "slot": 5,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
-    },
-    {
-      "enabled": true,
-      "name": "ほしあい",
-      "category": "Staff",
-      "slot": 6,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
       "name": "みのりんご",
       "category": "Staff",
-      "slot": 7,
+      "slot": 6,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -228,8 +217,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -239,8 +228,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -327,8 +316,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -338,8 +327,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -349,8 +338,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -431,69 +420,58 @@
     },
     {
       "enabled": true,
-      "name": "うにお_cxq",
+      "name": "桜琳あむ",
       "category": "DownerCast",
       "slot": 7,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
-    },
-    {
-      "enabled": true,
-      "name": "桜琳あむ",
-      "category": "DownerCast",
-      "slot": 8,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
       "name": "ケイバス",
       "category": "DownerCast",
-      "slot": 9,
+      "slot": 8,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
       "name": "てれてれほわいと",
       "category": "DownerCast",
-      "slot": 10,
+      "slot": 9,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
       "name": "kamenno_megia",
       "category": "DownerCast",
-      "slot": 11,
+      "slot": 10,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
       "name": "ZERONOSU",
       "category": "DownerCast",
-      "slot": 12,
+      "slot": 11,
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -514,8 +492,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     },
     {
       "enabled": true,
@@ -525,8 +503,8 @@
       "spawnKey": "staff_room",
       "hasPermission": true,
       "showArmband": true,
-      "showName": false,
-      "showPortrait": false
+      "showName": true,
+      "showPortrait": true
     }
   ],
   "posters": [
