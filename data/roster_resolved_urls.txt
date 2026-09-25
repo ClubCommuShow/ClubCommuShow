@@ -13,6 +13,10 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portra
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot2.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot3.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot4.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot5.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot6.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/switchcast/slot0.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/switchcast/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/castleader/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/castleader/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/uppercast/slot0.png
@@ -27,6 +31,10 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portra
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot4.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot5.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot6.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot7.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot8.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot9.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot10.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/downercast/slot11.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/condisionalcast/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/condisionalcast/slot1.png
