@@ -72,6 +72,7 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/poster
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/back/slot5.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/back/slot6.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/back/slot7.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/back/slot8.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot2.png
