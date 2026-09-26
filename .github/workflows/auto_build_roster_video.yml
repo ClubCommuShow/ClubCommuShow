@@ -1,4 +1,4 @@
-name: Build roster video one second page
+name: Build roster video 3-frame center
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Build one-second-page mp4 and frame map
+      - name: Build 3-frame-center mp4 and frame map
         run: |
           mkdir -p videos data docs/videos docs/data
           python github_manifest_to_video.py \
@@ -57,10 +57,11 @@ jobs:
             --include-posters \
             --include-portraits \
             --fps 30 \
-            --seconds-per-page 1 \
+            --frames-per-entry 3 \
+            --sample-frame 1 \
             --resize-mode stretch \
             --crf 16 \
-            --gop 30
+            --gop 1
 
           cp data/roster_manifest.json docs/data/roster_manifest.json
           cp data/roster_frame_map.txt docs/data/roster_frame_map.txt
@@ -113,7 +114,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m "chore: rebuild roster video one second page"
+            git commit -m "chore: rebuild roster video 3-frame center"
 
             if git push origin HEAD:main; then
               echo "Push succeeded"

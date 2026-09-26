@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -226,28 +227,17 @@ def create_placeholder_frame(dst_path: Path, width: int, height: int, background
     }
 
 
-def page_input_framerate(seconds_per_page: float) -> str:
-    if seconds_per_page <= 0.001:
-        seconds_per_page = 1.0
-    rounded = round(seconds_per_page)
-    if abs(seconds_per_page - float(rounded)) < 0.000001 and rounded >= 1:
-        return f'1/{rounded}'
-    return f'{1.0 / seconds_per_page:.8f}'
-
-
-def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str, seconds_per_page: float) -> None:
-    if seconds_per_page <= 0.001:
-        seconds_per_page = 1.0
+def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, gop: int, codec: str) -> None:
     if fps < 1:
         fps = 30
     if gop < 1:
-        gop = max(1, int(round(float(fps) * seconds_per_page)))
+        gop = 1
 
     cmd = [
         'ffmpeg',
         '-y',
         '-framerate',
-        page_input_framerate(seconds_per_page),
+        str(fps),
         '-start_number',
         '1',
         '-i',
@@ -262,8 +252,10 @@ def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, 
         str(crf),
         '-g',
         str(gop),
-        '-force_key_frames',
-        f'expr:gte(t,n_forced*{seconds_per_page:.6f})',
+        '-bf',
+        '0',
+        '-sc_threshold',
+        '0',
         '-tune',
         'stillimage',
         '-an',
@@ -272,7 +264,6 @@ def ffmpeg_build_video(frames_dir: Path, output_path: Path, fps: int, crf: int, 
         str(output_path),
     ]
     run(cmd)
-
 
 def unique_preserve(items: Iterable[str]) -> list[str]:
     seen: set[str] = set()
@@ -402,7 +393,7 @@ def resolve_frame_entries_from_manifest(raw_base: str, manifest: dict, include_p
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Build a one-second-per-page roster video from GitHub images and emit a matching frame map.')
+    parser = argparse.ArgumentParser(description='Build a 3-frame-per-image roster video from GitHub images and emit a center-frame map.')
     parser.add_argument('--repo-url', required=True)
     parser.add_argument('--manifest-url', default='')
     parser.add_argument('--output', required=True)
@@ -410,9 +401,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--include-posters', action='store_true')
     parser.add_argument('--include-portraits', action='store_true')
     parser.add_argument('--fps', type=int, default=30)
-    parser.add_argument('--seconds-per-page', type=float, default=1.0)
+    parser.add_argument('--frames-per-entry', type=int, default=3)
+    parser.add_argument('--sample-frame', type=int, default=1, help='0-based frame inside each repeated image block; 1 is the middle frame for 3-frame mode')
+    parser.add_argument('--seconds-per-page', type=float, default=1.0, help='Legacy compatibility option; ignored by 3-frame mode')
     parser.add_argument('--crf', type=int, default=16)
-    parser.add_argument('--gop', type=int, default=0)
+    parser.add_argument('--gop', type=int, default=1)
     parser.add_argument('--codec', default='libx264')
     parser.add_argument('--width', type=int, default=1920)
     parser.add_argument('--height', type=int, default=1080)
@@ -439,8 +432,20 @@ def main() -> int:
     print(f'Repo: {owner}/{repo}')
     print(f'Branch: {branch}')
     print(f'Manifest: {raw_manifest_url}')
+    fps = args.fps
+    if fps < 1:
+        fps = 30
+
+    frames_per_entry = args.frames_per_entry
+    if frames_per_entry < 1:
+        frames_per_entry = 3
+
+    sample_frame = args.sample_frame
+    if sample_frame < 0 or sample_frame >= frames_per_entry:
+        sample_frame = frames_per_entry // 2
+
     print(f'Canvas: {args.width}x{args.height}')
-    print(f'Mode: one-second-page / resize={args.resize_mode} / fps={args.fps} / seconds_per_page={args.seconds_per_page}')
+    print(f'Mode: 3-frame roster / resize={args.resize_mode} / fps={fps} / frames_per_entry={frames_per_entry} / sample_frame={sample_frame}')
 
     try:
         manifest = json.loads(download_bytes(raw_manifest_url).decode('utf-8'))
@@ -457,8 +462,8 @@ def main() -> int:
                 print(f'  - {item}', file=sys.stderr)
         return 2
 
-    print(f'Resolved pages: {len(resolved_entries)}')
-    print(f'Expected duration: {len(resolved_entries) * args.seconds_per_page:.3f}s')
+    print(f'Resolved entries: {len(resolved_entries)}')
+    print(f'Expected duration: {(len(resolved_entries) * frames_per_entry) / float(fps):.3f}s')
     if missing:
         print(f'Unresolved entries: {len(missing)}')
         for item in missing[:20]:
@@ -484,10 +489,11 @@ def main() -> int:
         entry = resolved_entries[source_idx]
         url = entry['url']
         label = f"{entry.get('kind', '?')}|{entry.get('category', '?')}|{entry.get('slot', '?')}"
-        frame_path = frames_dir / f'frame_{frame_idx + 1:06d}.png'
+        block_start_frame = frame_idx
+        first_frame_path = frames_dir / f'frame_{block_start_frame + 1:06d}.png'
         try:
             image_bytes = download_bytes(url)
-            uv_info = normalize_image_selected(image_bytes, frame_path, args.width, args.height, args.background, args.resize_mode)
+            uv_info = normalize_image_selected(image_bytes, first_frame_path, args.width, args.height, args.background, args.resize_mode)
         except Exception as exc:
             bad_label = f'{label} -> {url} -> {exc}'
             bad_images.append(bad_label)
@@ -501,15 +507,23 @@ def main() -> int:
                 source_idx += 1
                 continue
 
-            uv_info = create_placeholder_frame(frame_path, args.width, args.height, args.background, label, url, str(exc))
+            uv_info = create_placeholder_frame(first_frame_path, args.width, args.height, args.background, label, url, str(exc))
 
+        repeat_index = 1
+        while repeat_index < frames_per_entry:
+            repeated_frame_path = frames_dir / f'frame_{block_start_frame + repeat_index + 1:06d}.png'
+            shutil.copyfile(first_frame_path, repeated_frame_path)
+            repeat_index += 1
+
+        sample_frame_index = block_start_frame + sample_frame
         entry.update(uv_info)
-        entry['page'] = frame_idx
-        entry['sample_time'] = float(frame_idx) * args.seconds_per_page + (args.seconds_per_page * 0.5)
+        entry['page'] = len(processed_entries)
+        entry['frame_index'] = sample_frame_index
+        entry['sample_time'] = (float(sample_frame_index) + 0.5) / float(fps)
         processed_entries.append(entry)
 
         source_idx += 1
-        frame_idx += 1
+        frame_idx += frames_per_entry
 
     resolved_entries = processed_entries
 
@@ -526,7 +540,7 @@ def main() -> int:
         lines: list[str] = []
         for entry in resolved_entries:
             lines.append(
-                f"{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}|page={entry.get('page', 0)}|sample={entry.get('sample_time', 0.5):.3f}|bad={entry.get('bad_image', 0)}" 
+                f"{entry.get('frame_index', 0)}|{entry['kind']}|{entry['category']}|{entry['slot']}|{entry['url']}|{entry.get('tiling_x', 1.0):.8f}|{entry.get('tiling_y', 1.0):.8f}|{entry.get('offset_x', 0.0):.8f}|{entry.get('offset_y', 0.0):.8f}|page={entry.get('page', 0)}|frames={frames_per_entry}|sampleFrame={sample_frame}|sample={entry.get('sample_time', 0.0):.6f}|bad={entry.get('bad_image', 0)}" 
             )
         Path(args.frame_map_output).parent.mkdir(parents=True, exist_ok=True)
         Path(args.frame_map_output).write_text('\n'.join(lines) + '\n', encoding='utf-8')
@@ -534,7 +548,7 @@ def main() -> int:
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     try:
-        ffmpeg_build_video(frames_dir, output_path, args.fps, args.crf, args.gop, args.codec, args.seconds_per_page)
+        ffmpeg_build_video(frames_dir, output_path, fps, args.crf, args.gop, args.codec)
     except Exception as exc:
         print(f'Failed to build video\n{exc}', file=sys.stderr)
         return 4
