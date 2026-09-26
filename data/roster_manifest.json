@@ -1,5 +1,5 @@
 {
-  "members": [ 
+  "members": [
     {
       "enabled": true,
       "name": "ポチョLOVE",
@@ -758,5 +758,13 @@
       "category": "Kanpe",
       "slot": 7
     }
-  ]
+  ],
+  "videoRoster": {
+    "enabled": true,
+    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/videos/roster.mp4",
+    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/data/roster_frame_map.txt",
+    "fps": 30,
+    "framesPerPortrait": 3,
+    "sampleFrame": 1
+  }
 }
