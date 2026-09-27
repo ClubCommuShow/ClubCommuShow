@@ -279,14 +279,14 @@ def unique_preserve(items: Iterable[str]) -> list[str]:
 def poster_dir_candidates(category: str) -> list[str]:
     key = normalize_slug(category)
     mapping = {
-        'eventposter': ['event', 'eventposter', 'event_poster'],
+        'eventposter': ['main', 'event', 'eventposter', 'event_poster'],
         'frontposter': ['front', 'frontposter', 'front_poster'],
         'sideposter': ['side', 'sideposter', 'side_poster'],
         'backposter': ['back', 'backposter', 'back_poster'],
         'notice': ['notice'],
         'notices': ['notice', 'notices'],
-        'menu': ['menu', 'kanpe'],
-        'kanpe': ['kanpe', 'menu'],
+        'menu': ['menu'],
+        'kanpe': ['kanpe'],
     }
     return mapping.get(key, [key])
 
