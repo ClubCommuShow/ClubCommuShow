@@ -718,6 +718,11 @@
       "slot": 8
     },
     {
+      "category": "BackPoster",
+      "enabled": true,
+      "slot": 9
+    },
+    {
       "category": "Notice",
       "enabled": true,
       "slot": 0
