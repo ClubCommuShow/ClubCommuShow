@@ -42,6 +42,8 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portra
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/condisionalcast/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/condisionalcast/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/condisionalcast/slot2.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/main/slot0.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/main/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/front/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/front/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/front/slot2.png
@@ -83,14 +85,6 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/poster
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot7.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot8.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/notice/slot9.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot0.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot1.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot2.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot3.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot4.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot5.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot6.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot7.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot2.png
@@ -102,3 +96,11 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/poster
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot8.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot9.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot10.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot0.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot1.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot2.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot3.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot4.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot5.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot6.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot7.png
