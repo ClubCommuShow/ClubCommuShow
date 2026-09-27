@@ -91,3 +91,14 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/poster
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot5.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot6.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/kanpe/slot7.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot0.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot1.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot2.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot3.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot4.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot5.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot6.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot7.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot8.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot9.png
+https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/posters/menu/slot10.png
