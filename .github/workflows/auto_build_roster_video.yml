@@ -8,6 +8,7 @@ on:
       - 'data/roster_manifest.json'
       - 'images/**'
       - 'github_manifest_to_video.py'
+      - 'prepare_video_roster_manifest.py'
       - '.github/workflows/auto_build_roster_video.yml'
   workflow_dispatch:
 
@@ -45,12 +46,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
+      - name: Build dynamic VideoRoster manifest
+        run: |
+          python prepare_video_roster_manifest.py \
+            --manifest "data/roster_manifest.json" \
+            --menu-dir "images/posters/menu" \
+            --output "data/roster_manifest.video.generated.json"
+
       - name: Build 3-frame-center mp4 and frame map
         run: |
           mkdir -p videos data docs/videos docs/data
           python github_manifest_to_video.py \
             --repo-url "https://github.com/${{ github.repository }}/" \
-            --manifest-url "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}/data/roster_manifest.json" \
+            --manifest-url "file://${{ github.workspace }}/data/roster_manifest.video.generated.json" \
             --output "videos/roster.mp4" \
             --frame-map-output "data/roster_frame_map.txt" \
             --save-url-list "data/roster_resolved_urls.txt" \
@@ -87,7 +95,6 @@ jobs:
           for i in 1 2 3 4 5; do
             echo "Safe push attempt $i"
 
-            # 毎回、GitHub上の最新mainに合わせ直してから生成ファイルだけ戻す。
             git fetch origin main
             git reset --hard origin/main
 
