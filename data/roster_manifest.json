@@ -1,819 +1,819 @@
 {
   "members": [
     {
+      "category": "Owner",
       "enabled": true,
+      "hasPermission": true,
       "name": "ポチョLOVE",
-      "category": "Owner",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/owner/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/owner/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Owner",
       "enabled": true,
+      "hasPermission": true,
       "name": "Clubコミュ症公式",
-      "category": "Owner",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
       "showArmband": true,
       "showName": false,
-      "showPortrait": false
+      "showPortrait": false,
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
-      "enabled": true,
-      "name": "aizawaakito0418",
       "category": "Manager",
-      "slot": 0,
-      "spawnKey": "staff_room",
+      "enabled": true,
       "hasPermission": true,
+      "name": "aizawaakito0418",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/manager/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/manager/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Operator",
       "enabled": true,
+      "hasPermission": true,
       "name": "MiyakoAoi",
-      "category": "Operator",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Operator",
       "enabled": true,
+      "hasPermission": true,
       "name": "ほのか_",
-      "category": "Operator",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Operator",
       "enabled": true,
+      "hasPermission": true,
       "name": "ここらо",
-      "category": "Operator",
-      "slot": 2,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot2.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot2.png"
+      "slot": 2,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Operator",
       "enabled": true,
+      "hasPermission": true,
       "name": "ごまもっち",
-      "category": "Operator",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot3.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/operator/slot3.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Assistant",
       "enabled": true,
+      "hasPermission": true,
       "name": "rokyodragon",
-      "category": "Assistant",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/assistant/slot0.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/assistant/slot0.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Assistant",
       "enabled": true,
+      "hasPermission": true,
       "name": "永遠-towa-",
-      "category": "Assistant",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/assistant/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/assistant/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
-      "enabled": true,
-      "name": "望黛 彩晴",
       "category": "Assistant",
-      "slot": 2,
-      "spawnKey": "staff_room",
+      "enabled": true,
       "hasPermission": true,
+      "name": "望黛 彩晴",
       "showArmband": true,
       "showName": false,
-      "showPortrait": false
+      "showPortrait": false,
+      "slot": 2,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "StaffLeader",
       "enabled": true,
+      "hasPermission": true,
       "name": "ストロベリーのマカ",
-      "category": "StaffLeader",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staffleader/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staffleader/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "StaffLeader",
       "enabled": true,
+      "hasPermission": true,
       "name": "Tixia",
-      "category": "StaffLeader",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staffleader/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staffleader/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "nekomaru49",
-      "category": "Staff",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "星海ヒロ",
-      "category": "Staff",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "ひなしー",
-      "category": "Staff",
-      "slot": 2,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot2.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot2.png"
+      "slot": 2,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "し ゃ ち",
-      "category": "Staff",
-      "slot": 3,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot3.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot3.png"
+      "slot": 3,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "Yoshi33563",
-      "category": "Staff",
-      "slot": 4,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot4.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot4.png"
+      "slot": 4,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "ほしあい",
-      "category": "Staff",
-      "slot": 5,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot5.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot5.png"
+      "slot": 5,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "Staff",
       "enabled": true,
+      "hasPermission": true,
       "name": "みのりんご",
-      "category": "Staff",
-      "slot": 6,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot6.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot6.png"
+      "slot": 6,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "SwitchCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "マルヒ_Secretary",
-      "category": "SwitchCast",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/switchcast/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/switchcast/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "SwitchCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "Mortar_217",
-      "category": "SwitchCast",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/switchcast/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/switchcast/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "CastLeader",
       "enabled": true,
+      "hasPermission": true,
       "name": "ずっと揺れていたい。",
-      "category": "CastLeader",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/castleader/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/castleader/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "CastLeader",
       "enabled": true,
+      "hasPermission": true,
       "name": "まぼまぼ",
-      "category": "CastLeader",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/castleader/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/castleader/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "黒喰ぴぴ",
-      "category": "UpperCast",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "青染るの",
-      "category": "UpperCast",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "でらまん",
-      "category": "UpperCast",
-      "slot": 2,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot2.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot2.png"
+      "slot": 2,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "みも77",
-      "category": "UpperCast",
-      "slot": 3,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot3.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot3.png"
+      "slot": 3,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "かざき_りわと",
-      "category": "UpperCast",
-      "slot": 4,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot4.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot4.png"
+      "slot": 4,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "ASU_1115",
-      "category": "UpperCast",
-      "slot": 5,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot5.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot5.png"
+      "slot": 5,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "おおかな",
-      "category": "UpperCast",
-      "slot": 6,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot6.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot6.png"
+      "slot": 6,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "UpperCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "AmakazeRin",
-      "category": "UpperCast",
-      "slot": 7,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot7.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/uppercast/slot7.png"
+      "slot": 7,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "ZetOsan",
-      "category": "DownerCast",
-      "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot0.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot0.png"
+      "slot": 0,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "まもなか",
-      "category": "DownerCast",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "なす_；",
-      "category": "DownerCast",
-      "slot": 2,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot2.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot2.png"
+      "slot": 2,
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "笠っち0123",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot3.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot3.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "yuki_snow8",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot4.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 4,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot4.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "おろし生姜",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot5.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 5,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot5.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "aster_oct",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot6.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 6,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot6.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "桜琳あむ",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot7.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 7,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot7.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "ケイバス",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot8.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 8,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot8.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "てれてれほわいと",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot9.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 9,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot9.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "DownerCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "kamenno_megia",
-      "category": "DownerCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot10.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 10,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot10.png"
+      "spawnKey": "staff_room"
     },
     {
-      "enabled": true,
-      "name": "ZERONOSU",
       "category": "DownerCast",
+      "enabled": true,
+      "hasPermission": true,
+      "name": "ZERONOSU",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot11.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 11,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/downercast/slot11.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "CondisionalCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "プニキ（Aspire_K4）",
-      "category": "CondisionalCast",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot0.png",
+      "showArmband": true,
+      "showName": true,
+      "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot0.png"
+      "spawnKey": "staff_room"
     },
     {
+      "category": "CondisionalCast",
       "enabled": true,
+      "hasPermission": true,
       "name": "ごえさん",
-      "category": "CondisionalCast",
-      "slot": 1,
-      "spawnKey": "staff_room",
-      "hasPermission": true,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot1.png"
+      "slot": 1,
+      "spawnKey": "staff_room"
     },
     {
-      "enabled": true,
-      "name": "錆びた鯖",
       "category": "CondisionalCast",
-      "slot": 2,
-      "spawnKey": "staff_room",
+      "enabled": true,
       "hasPermission": true,
+      "name": "錆びた鯖",
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot2.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/condisionalcast/slot2.png"
+      "slot": 2,
+      "spawnKey": "staff_room"
     }
   ],
   "posters": [
     {
-      "enabled": true,
       "category": "EventPoster",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "EventPoster",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 2
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 3
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 4
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 5
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 6
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 7
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 8
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 9
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 10
     },
     {
-      "enabled": true,
       "category": "FrontPoster",
+      "enabled": true,
       "slot": 11
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 2
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 3
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 4
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 5
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 6
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 7
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 8
     },
     {
-      "enabled": true,
       "category": "SidePoster",
+      "enabled": true,
       "slot": 9
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 2
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 3
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 4
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 5
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 6
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 7
     },
     {
-      "enabled": true,
       "category": "BackPoster",
+      "enabled": true,
       "slot": 8
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 2
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 3
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 4
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 5
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 6
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 7
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 8
     },
     {
-      "enabled": true,
       "category": "Notice",
+      "enabled": true,
       "slot": 9
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 0
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 1
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 2
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 3
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 4
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 5
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 6
     },
     {
-      "enabled": true,
       "category": "Kanpe",
+      "enabled": true,
       "slot": 7
     }
   ],
   "videoRoster": {
     "enabled": true,
-    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/videos/roster.mp4",
-    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/data/roster_frame_map.txt",
     "fps": 30,
+    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/data/roster_frame_map.txt",
     "framesPerPortrait": 3,
-    "sampleFrame": 1
+    "sampleFrame": 1,
+    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/videos/roster.mp4"
   }
 }
