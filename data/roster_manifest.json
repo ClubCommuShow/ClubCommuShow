@@ -10,7 +10,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "owner",
+      "accessLevel": 4
     },
     {
       "category": "Owner",
@@ -21,7 +23,9 @@
       "showName": false,
       "showPortrait": false,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "owner",
+      "accessLevel": 4
     },
     {
       "category": "Manager",
@@ -33,7 +37,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "manager",
+      "accessLevel": 4
     },
     {
       "category": "Operator",
@@ -45,7 +51,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "operator",
+      "accessLevel": 4
     },
     {
       "category": "Operator",
@@ -57,7 +65,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "operator",
+      "accessLevel": 4
     },
     {
       "category": "Operator",
@@ -69,7 +79,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "operator",
+      "accessLevel": 4
     },
     {
       "category": "Operator",
@@ -81,7 +93,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "operator",
+      "accessLevel": 4
     },
     {
       "category": "Assistant",
@@ -93,7 +107,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "assistant",
+      "accessLevel": 4
     },
     {
       "category": "Assistant",
@@ -105,7 +121,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "assistant",
+      "accessLevel": 4
     },
     {
       "category": "Assistant",
@@ -116,7 +134,9 @@
       "showName": false,
       "showPortrait": false,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "assistant",
+      "accessLevel": 4
     },
     {
       "category": "StaffLeader",
@@ -128,7 +148,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staffLeader",
+      "accessLevel": 3
     },
     {
       "category": "StaffLeader",
@@ -140,7 +162,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staffLeader",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -152,7 +176,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -164,7 +190,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -176,7 +204,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -188,7 +218,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -200,7 +232,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 4,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -212,7 +246,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 5,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "Staff",
@@ -224,7 +260,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 6,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "staff",
+      "accessLevel": 3
     },
     {
       "category": "SwitchCast",
@@ -236,7 +274,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "switchCast",
+      "accessLevel": 3
     },
     {
       "category": "SwitchCast",
@@ -248,7 +288,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "switchCast",
+      "accessLevel": 3
     },
     {
       "category": "CastLeader",
@@ -260,7 +302,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "castLeader",
+      "accessLevel": 2
     },
     {
       "category": "CastLeader",
@@ -272,7 +316,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "castLeader",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -284,7 +330,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -296,7 +344,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -308,7 +358,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -320,7 +372,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -332,7 +386,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 4,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -344,7 +400,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 5,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -356,7 +414,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 6,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "UpperCast",
@@ -368,7 +428,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 7,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "upperCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -380,7 +442,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -392,7 +456,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -404,7 +470,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -416,7 +484,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 3,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -428,7 +498,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 4,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -440,7 +512,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 5,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -452,7 +526,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 6,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -464,7 +540,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 7,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -476,7 +554,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 8,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -488,7 +568,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 9,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -500,7 +582,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 10,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "DownerCast",
@@ -512,7 +596,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 11,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "downerCast",
+      "accessLevel": 2
     },
     {
       "category": "CondisionalCast",
@@ -524,7 +610,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 0,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "conditionalCast",
+      "accessLevel": 2
     },
     {
       "category": "CondisionalCast",
@@ -536,7 +624,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 1,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "conditionalCast",
+      "accessLevel": 2
     },
     {
       "category": "CondisionalCast",
@@ -548,7 +638,9 @@
       "showName": true,
       "showPortrait": true,
       "slot": 2,
-      "spawnKey": "staff_room"
+      "spawnKey": "staff_room",
+      "roleType": "conditionalCast",
+      "accessLevel": 2
     }
   ],
   "posters": [
@@ -837,5 +929,85 @@
     "sampleFrame": 1,
     "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/videos/roster.mp4"
   },
-  "posterTextEnabled": true
+  "posterTextEnabled": true,
+  "roleTypes": [
+    {
+      "id": "guest",
+      "label": "一般",
+      "accessLevel": 0,
+      "styleId": "guest"
+    },
+    {
+      "id": "regular",
+      "label": "VIP",
+      "accessLevel": 1,
+      "styleId": "regular"
+    },
+    {
+      "id": "castLeader",
+      "label": "CastLeader",
+      "accessLevel": 2,
+      "styleId": "castLeader"
+    },
+    {
+      "id": "upperCast",
+      "label": "UpperCast",
+      "accessLevel": 2,
+      "styleId": "upperCast"
+    },
+    {
+      "id": "downerCast",
+      "label": "DownerCast",
+      "accessLevel": 2,
+      "styleId": "downerCast"
+    },
+    {
+      "id": "conditionalCast",
+      "label": "ConditionalCast",
+      "accessLevel": 2,
+      "styleId": "conditionalCast"
+    },
+    {
+      "id": "staffLeader",
+      "label": "StaffLeader",
+      "accessLevel": 3,
+      "styleId": "staffLeader"
+    },
+    {
+      "id": "staff",
+      "label": "Staff",
+      "accessLevel": 3,
+      "styleId": "staff"
+    },
+    {
+      "id": "switchCast",
+      "label": "SwitchCast",
+      "accessLevel": 3,
+      "styleId": "switchCast"
+    },
+    {
+      "id": "owner",
+      "label": "Owner",
+      "accessLevel": 4,
+      "styleId": "owner"
+    },
+    {
+      "id": "manager",
+      "label": "Manager",
+      "accessLevel": 4,
+      "styleId": "manager"
+    },
+    {
+      "id": "operator",
+      "label": "Operator",
+      "accessLevel": 4,
+      "styleId": "operator"
+    },
+    {
+      "id": "assistant",
+      "label": "Assistant",
+      "accessLevel": 4,
+      "styleId": "assistant"
+    }
+  ]
 }
