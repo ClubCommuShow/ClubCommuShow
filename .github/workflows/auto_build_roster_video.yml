@@ -71,6 +71,8 @@ jobs:
             --crf 16 \
             --gop 1
 
+          python -c 'import hashlib,pathlib; paths=["data/roster_frame_map.txt","videos/roster.mp4"]; h=hashlib.sha256(); [(h.update(p.encode()),h.update(hashlib.sha256(pathlib.Path(p).read_bytes()).digest())) for p in paths]; pathlib.Path("data/roster_video_revision.txt").write_text(h.hexdigest()+"\n",encoding="ascii")'
+          cp data/roster_video_revision.txt docs/data/roster_video_revision.txt
           cp data/roster_manifest.json docs/data/roster_manifest.json
           cp data/roster_frame_map.txt docs/data/roster_frame_map.txt
           cp data/roster_resolved_urls.txt docs/data/roster_resolved_urls.txt
@@ -84,6 +86,8 @@ jobs:
           tmpdir="$(mktemp -d)"
           mkdir -p "$tmpdir/videos" "$tmpdir/data" "$tmpdir/docs/videos" "$tmpdir/docs/data"
 
+          cp data/roster_video_revision.txt "$tmpdir/data/roster_video_revision.txt"
+          cp docs/data/roster_video_revision.txt "$tmpdir/docs/data/roster_video_revision.txt"
           cp videos/roster.mp4 "$tmpdir/videos/roster.mp4"
           cp data/roster_frame_map.txt "$tmpdir/data/roster_frame_map.txt"
           cp data/roster_resolved_urls.txt "$tmpdir/data/roster_resolved_urls.txt"
@@ -99,6 +103,8 @@ jobs:
             git reset --hard origin/main
 
             mkdir -p videos data docs/videos docs/data
+            cp "$tmpdir/data/roster_video_revision.txt" data/roster_video_revision.txt
+            cp "$tmpdir/docs/data/roster_video_revision.txt" docs/data/roster_video_revision.txt
             cp "$tmpdir/videos/roster.mp4" videos/roster.mp4
             cp "$tmpdir/data/roster_frame_map.txt" data/roster_frame_map.txt
             cp "$tmpdir/data/roster_resolved_urls.txt" data/roster_resolved_urls.txt
@@ -108,6 +114,8 @@ jobs:
             cp "$tmpdir/docs/data/roster_resolved_urls.txt" docs/data/roster_resolved_urls.txt
 
             git add \
+              data/roster_video_revision.txt \
+              docs/data/roster_video_revision.txt \
               videos/roster.mp4 \
               data/roster_frame_map.txt \
               data/roster_resolved_urls.txt \
