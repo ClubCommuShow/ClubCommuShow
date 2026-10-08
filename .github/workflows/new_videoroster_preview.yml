@@ -1,0 +1,71 @@
+name: NewClubCommuShow VideoRoster preview
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tests/ebk-videoroster/groups/**'
+      - 'tests/ebk-videoroster/ebk_media_root.json'
+      - 'NewClubCommuShow/tools/publish_new_videoroster.py'
+      - '.github/workflows/new_videoroster_preview.yml'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: new-club-videoroster-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  publish-preview:
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.save.outputs.publish }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify generations and publish isolated preview
+        run: python NewClubCommuShow/tools/publish_new_videoroster.py
+      - name: Save without overwriting newer inputs
+        id: save
+        run: |
+          set -euo pipefail
+          base_sha="$(git rev-parse HEAD)"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add NewClubCommuShow/groups NewClubCommuShow/ebk_media_root.json
+          if ! git diff --cached --quiet; then git commit -m 'build: publish isolated NewClubCommuShow preview'; fi
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git diff --quiet "$base_sha" origin/main -- tests/ebk-videoroster/groups tests/ebk-videoroster/ebk_media_root.json NewClubCommuShow/tools/publish_new_videoroster.py .github/workflows/new_videoroster_preview.yml; then
+              echo 'publish=false' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo 'publish=true' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          exit 1
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.save.outputs.publish == 'true'
+        with:
+          path: .
+  deploy:
+    needs: publish-preview
+    if: needs.publish-preview.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
