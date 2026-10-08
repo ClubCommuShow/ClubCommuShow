@@ -32,7 +32,11 @@ def write_json(path, value):
 
 
 def source_image(root, row, kind, base):
-    # Preserve explicit portrait mappings (semantic slot need not equal filename).
+    # Portrait authority is the roster's category + slot, never an unverified URL.
+    # A stale portraitUrl must not redirect one member to another member's slot.
+    from github_manifest_to_video import find_image
+    if kind == 'member':
+        return find_image(root / 'images', kind, str(row['category']), int(row['slot']))
     address = row.get('portraitUrl' if kind == 'member' else 'imageUrl', '')
     if address:
         if not address.startswith(base + '/'):
@@ -58,6 +62,7 @@ def build_common(root, output, base):
     manifest['posters'] = posters
     records = []
     skipped = []
+    ignored_portrait_urls = []
     keys = set()
     for field, kind in [('members', 'member'), ('posters', 'poster')]:
         for row in manifest.get(field, []):
@@ -73,6 +78,10 @@ def build_common(root, output, base):
                 raise ValueError('Duplicate key: ' + key)
             keys.add(key)
             path = source_image(root, row, kind, base)
+            if kind == 'member' and row.get('portraitUrl'):
+                expected = '' if path is None else base + '/' + quote(path.relative_to(root).as_posix(), safe='/')
+                if unquote(row['portraitUrl']) != unquote(expected):
+                    ignored_portrait_urls.append({'key': key, 'configuredUrl': row['portraitUrl'], 'resolvedUrl': expected})
             if path is None:
                 skipped.append(key)
                 continue  # Missing keys use the Wizard's local image.
@@ -98,12 +107,17 @@ def build_common(root, output, base):
             hashes.append(hashlib.sha256(path.read_bytes()).hexdigest())
         slides.encode(frames, output / 'roster.mp4', 1280, 720)
     result = copy.deepcopy(manifest)
+    for row in result.get('members', []):
+        if not isinstance(row, dict) or type(row.get('slot')) is not int or not row.get('category'):
+            continue
+        path = source_image(root, row, 'member', base)
+        row['portraitUrl'] = '' if path is None else base + '/' + quote(path.relative_to(root).as_posix(), safe='/')
     result['videoRoster'] = {'enabled': True, 'fps': 30, 'framesPerEntry': 3, 'sampleFrame': 1,
                             'videoUrl': base + '/common/roster.mp4',
                             'frameMapUrl': base + '/common/frame_map.txt'}
     write_json(output / 'manifest.json', result)
     (output / 'frame_map.txt').write_text('\n'.join(lines) + '\n', encoding='utf-8')
-    write_json(output / 'build_report.json', {'captured': len(records), 'fallbackKeys': skipped, 'sourceHashes': hashes})
+    write_json(output / 'build_report.json', {'captured': len(records), 'fallbackKeys': skipped, 'sourceHashes': hashes, 'ignoredPortraitUrls': ignored_portrait_urls})
     return {'id': 'common', 'manifestPath': 'common/manifest.json', 'format': 'ebk-roster-v1'}, skipped
 
 
