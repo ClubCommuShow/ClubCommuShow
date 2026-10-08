@@ -1,0 +1,15 @@
+1|member|Owner|0||1|1|0|0|page=0|frames=3|sampleFrame=1|sample=0.050000|bad=0|aspect=0.29980469
+4|member|Operator|0||1|1|0|0|page=1|frames=3|sampleFrame=1|sample=0.150000|bad=0|aspect=0.29980469
+7|member|Staff|0||1|1|0|0|page=2|frames=3|sampleFrame=1|sample=0.250000|bad=0|aspect=0.29980469
+10|member|CastLeader|0||1|1|0|0|page=3|frames=3|sampleFrame=1|sample=0.350000|bad=0|aspect=0.30078125
+13|member|UpperCast|0||1|1|0|0|page=4|frames=3|sampleFrame=1|sample=0.450000|bad=0|aspect=0.29980469
+16|poster|EventPoster|0||1|1|0|0|page=5|frames=3|sampleFrame=1|sample=0.550000|bad=0|aspect=1.00000000
+19|poster|Notice|0||1|1|0|0|page=6|frames=3|sampleFrame=1|sample=0.650000|bad=0|aspect=1.20024722
+22|poster|Notice|1||1|1|0|0|page=7|frames=3|sampleFrame=1|sample=0.750000|bad=0|aspect=1.20024722
+25|poster|Kanpe|0||1|1|0|0|page=8|frames=3|sampleFrame=1|sample=0.850000|bad=0|aspect=1.77777778
+28|poster|Menu|0||1|1|0|0|page=9|frames=3|sampleFrame=1|sample=0.950000|bad=0|aspect=0.66666667
+31|poster|Menu|1||1|1|0|0|page=10|frames=3|sampleFrame=1|sample=1.050000|bad=0|aspect=0.66666667
+34|poster|Menu|2||1|1|0|0|page=11|frames=3|sampleFrame=1|sample=1.150000|bad=0|aspect=0.66666667
+37|poster|Menu|3||1|1|0|0|page=12|frames=3|sampleFrame=1|sample=1.250000|bad=0|aspect=0.66666667
+40|poster|Menu|4||1|1|0|0|page=13|frames=3|sampleFrame=1|sample=1.350000|bad=0|aspect=0.66666667
+43|poster|Menu|5||1|1|0|0|page=14|frames=3|sampleFrame=1|sample=1.450000|bad=0|aspect=0.66666667

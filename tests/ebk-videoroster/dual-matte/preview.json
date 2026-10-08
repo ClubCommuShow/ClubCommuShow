@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-dual-matte-sbs-srgb-v1",
+  "testOnly": true,
+  "compositeSpace": "srgb-encoded",
+  "packedLayout": "left-black-right-white",
+  "logicalWidth": 640,
+  "logicalHeight": 360,
+  "encodedWidth": 1280,
+  "encodedHeight": 360,
+  "fps": 30,
+  "framesPerImage": 60,
+  "sampleFrame": 30,
+  "qp": 10,
+  "encoderTune": "psnr",
+  "videoFile": "preview.mp4",
+  "videoSha256": "6ca3e2457e61563a7298880cdb9025ff7e58354355bca71b1fad8955f3b0711f",
+  "entries": [
+    {
+      "id": "test_0",
+      "file": "test_0.png",
+      "key": "poster|DualMatteTest|0",
+      "sampleFrame": 30,
+      "sampleTimeSeconds": 1.0166666666666666,
+      "sourceSha256": "afb1c6eb5fa19eba5b960c3d74c05b8f79676f3e0aba40f518e8ec24fd3cbb26"
+    },
+    {
+      "id": "test_1",
+      "file": "test_1.png",
+      "key": "poster|DualMatteTest|1",
+      "sampleFrame": 90,
+      "sampleTimeSeconds": 3.0166666666666666,
+      "sourceSha256": "5df5566cc5c5dac25d9a149def3dc681d893fc76953affda5987dcd1647274b0"
+    },
+    {
+      "id": "test_2",
+      "file": "test_2.png",
+      "key": "poster|DualMatteTest|2",
+      "sampleFrame": 150,
+      "sampleTimeSeconds": 5.016666666666667,
+      "sourceSha256": "d410022488c8305a8e92780900a63b516fe47bdb184db661ec96834daf4fb4fd"
+    },
+    {
+      "id": "test_3",
+      "file": "test_3.png",
+      "key": "poster|DualMatteTest|3",
+      "sampleFrame": 210,
+      "sampleTimeSeconds": 7.016666666666667,
+      "sourceSha256": "beddc5311006161d63eeb6e40aad66629437263625313aaece1286701607b5f9"
+    },
+    {
+      "id": "test_4_opaque",
+      "file": "test_4_opaque.png",
+      "key": "poster|DualMatteTest|4",
+      "sampleFrame": 270,
+      "sampleTimeSeconds": 9.016666666666667,
+      "sourceSha256": "89eb18b7856e154a7b6e03d9de24c772b6de74ddcddbb0fa3df77919315eded5"
+    }
+  ],
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/dual-matte/preview.mp4"
+}

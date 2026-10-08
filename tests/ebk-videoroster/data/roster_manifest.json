@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "testOnly": true,
+  "members": [
+    {
+      "category": "Owner",
+      "slot": 0,
+      "name": "Astra",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": ""
+    },
+    {
+      "category": "Operator",
+      "slot": 0,
+      "name": "Noa",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": ""
+    },
+    {
+      "category": "Staff",
+      "slot": 0,
+      "name": "Mio",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": ""
+    },
+    {
+      "category": "CastLeader",
+      "slot": 0,
+      "name": "Ren",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": ""
+    },
+    {
+      "category": "UpperCast",
+      "slot": 0,
+      "name": "Ciel",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": ""
+    }
+  ],
+  "posters": [
+    {
+      "category": "EventPoster",
+      "slot": 0,
+      "enabled": true
+    },
+    {
+      "category": "Notice",
+      "slot": 0,
+      "enabled": true
+    },
+    {
+      "category": "Notice",
+      "slot": 1,
+      "enabled": true
+    },
+    {
+      "category": "Kanpe",
+      "slot": 0,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 0,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 1,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 2,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 3,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 4,
+      "enabled": true
+    },
+    {
+      "category": "Menu",
+      "slot": 5,
+      "enabled": true
+    }
+  ],
+  "videoRoster": {
+    "enabled": true,
+    "fps": 30,
+    "framesPerPortrait": 3,
+    "sampleFrame": 1,
+    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/videos/roster.mp4",
+    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/data/roster_frame_map.txt"
+  }
+}

@@ -1,0 +1,5 @@
+1|poster|DualMatteTest|0|test_0.png|1|1|0|0|frames=3|sampleFrame=1|sample=0.050000|format=ebk-dual-matte-sbs-srgb-v1
+4|poster|DualMatteTest|1|test_1.png|1|1|0|0|frames=3|sampleFrame=1|sample=0.150000|format=ebk-dual-matte-sbs-srgb-v1
+7|poster|DualMatteTest|2|test_2.png|1|1|0|0|frames=3|sampleFrame=1|sample=0.250000|format=ebk-dual-matte-sbs-srgb-v1
+10|poster|DualMatteTest|3|test_3.png|1|1|0|0|frames=3|sampleFrame=1|sample=0.350000|format=ebk-dual-matte-sbs-srgb-v1
+13|poster|DualMatteTest|4|test_4_opaque.png|1|1|0|0|frames=3|sampleFrame=1|sample=0.450000|format=ebk-dual-matte-sbs-srgb-v1
