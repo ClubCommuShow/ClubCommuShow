@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "common",
+  "label": "共通画像",
+  "kind": "common",
+  "generation": "c92a3d876587348b6b610a233f6cca01",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 57,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/common/roster_c92a3d876587348b6b610a233f6cca01.mp4",
+  "videoSha256": "d2e8d97afbb9668025d1644f2f9b4927ed968ea896fa4eb626ef97afc9c627d7",
+  "entries": [
+    {
+      "key": "member|Owner|0",
+      "label": "ポートレート / Astra",
+      "sourceSha256": "013cb2d69057e7704aca2a4fa7ad3309e7a898499625737494a4c86768ea928f",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "member|Operator|0",
+      "label": "ポートレート / Noa",
+      "sourceSha256": "78899fc48f5c705ba18e6fcba20ae334336d0b993f7d77926c8908208df3d0c5",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "member|Staff|0",
+      "label": "ポートレート / Mio",
+      "sourceSha256": "67541a8701451ec349e67a21ff0d5ee4885bfce4d0b791e1f1069e19bc7554ca",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    },
+    {
+      "key": "member|CastLeader|0",
+      "label": "ポートレート / Ren",
+      "sourceSha256": "dcb6a0f785c4e1b3e5d157575d6865f737fd2ed77170a1b79c3ecfde2b114aad",
+      "sampleFrame": 13,
+      "sampleTimeSeconds": 0.43333333333333335
+    },
+    {
+      "key": "member|UpperCast|0",
+      "label": "ポートレート / Ciel",
+      "sourceSha256": "d65243612df9bf43c5b1cc59b9ab043c10feb7874c36d4f9cefbfe046c1becf8",
+      "sampleFrame": 16,
+      "sampleTimeSeconds": 0.5333333333333333
+    },
+    {
+      "key": "poster|EventPoster|0",
+      "label": "ポスター / Starlight Lounge",
+      "sourceSha256": "c32a2b140f5b862b73546c84f7297c2ab36d451e2351b4ab4d12029dd90c36f3",
+      "sampleFrame": 19,
+      "sampleTimeSeconds": 0.6333333333333333
+    },
+    {
+      "key": "poster|Notice|0",
+      "label": "注意事項 / はじめに",
+      "sourceSha256": "32bdb4817bcea63d86415a6d74e058d751c6be194e77bf3635c3fd927f498ac5",
+      "sampleFrame": 22,
+      "sampleTimeSeconds": 0.7333333333333333
+    },
+    {
+      "key": "poster|Notice|1",
+      "label": "注意事項 / 撮影",
+      "sourceSha256": "3bfe4f3b5d0c55ccdc32df7d7c2091f91565b0a1c1b94c0a6a08081a8e2bd836",
+      "sampleFrame": 25,
+      "sampleTimeSeconds": 0.8333333333333334
+    },
+    {
+      "key": "poster|Kanpe|0",
+      "label": "カンペ / 接客ガイド",
+      "sourceSha256": "5acc92ae6b3081de04e71caa0e23e55710521def46449bb7d750746111ba7a15",
+      "sampleFrame": 28,
+      "sampleTimeSeconds": 0.9333333333333333
+    },
+    {
+      "key": "poster|Menu|0",
+      "label": "商品 / LuminousSoda",
+      "sourceSha256": "af4e689ef6e88b504c90c0cf1fabe0d4d9aaf61facd21323f6bc122379c2e57b",
+      "sampleFrame": 31,
+      "sampleTimeSeconds": 1.0333333333333334
+    },
+    {
+      "key": "poster|Menu|1",
+      "label": "商品 / MidnightLatte",
+      "sourceSha256": "d289f5f76c78aeac3b5bd6834725b53684a4da96e092b18cfccacef81c1f465d",
+      "sampleFrame": 34,
+      "sampleTimeSeconds": 1.1333333333333333
+    },
+    {
+      "key": "poster|Menu|2",
+      "label": "商品 / NightTerraceSand",
+      "sourceSha256": "c6f68c22ae4a2893069dc4d04a615337763ba8421a1ce4aa1bdd4dc9df553a4c",
+      "sampleFrame": 37,
+      "sampleTimeSeconds": 1.2333333333333334
+    },
+    {
+      "key": "poster|Menu|3",
+      "label": "商品 / StarlightParfait",
+      "sourceSha256": "96856d737328104c3885442cc8c6cdc5128a4242a2751bd7b16208d05f4b6083",
+      "sampleFrame": 40,
+      "sampleTimeSeconds": 1.3333333333333333
+    },
+    {
+      "key": "poster|Menu|4",
+      "label": "商品 / TalkThemeCards",
+      "sourceSha256": "281c50ac383b64383b891b5f3d88733f08f3569db0a290f2db02b89af7ba1608",
+      "sampleFrame": 43,
+      "sampleTimeSeconds": 1.4333333333333333
+    },
+    {
+      "key": "poster|Menu|5",
+      "label": "商品 / KiramekiPhotoTicket",
+      "sourceSha256": "66be6a6f72d66994479cc54cef4c4b6cea36bdb1d3cba8a79e6e42aa3a020717",
+      "sampleFrame": 46,
+      "sampleTimeSeconds": 1.5333333333333334
+    },
+    {
+      "key": "poster|FloorMap|0",
+      "label": "フロアマップ / サンプルのエリア配置",
+      "sourceSha256": "c44e2668b1d9d2db33b92493763b3a2894d6b885966941e8286509d8e08d911b",
+      "sampleFrame": 49,
+      "sampleTimeSeconds": 1.6333333333333333
+    },
+    {
+      "key": "poster|Sign|0",
+      "label": "案内板 / Welcome",
+      "sourceSha256": "32bdb4817bcea63d86415a6d74e058d751c6be194e77bf3635c3fd927f498ac5",
+      "sampleFrame": 52,
+      "sampleTimeSeconds": 1.7333333333333334
+    },
+    {
+      "key": "poster|PhotoBackground|0",
+      "label": "撮影ブース背景 / Starlight",
+      "sourceSha256": "8f877b72341de97a7556ee4259c3a48d4cb58b12438c015537e68ce9fb1e97a1",
+      "sampleFrame": 55,
+      "sampleTimeSeconds": 1.8333333333333333
+    }
+  ]
+}

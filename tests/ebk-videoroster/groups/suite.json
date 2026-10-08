@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-media-suite-v1",
+  "testOnly": true,
+  "groups": [
+    {
+      "id": "common",
+      "label": "共通画像",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/common/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/common/roster_c92a3d876587348b6b610a233f6cca01.mp4",
+      "generation": "c92a3d876587348b6b610a233f6cca01",
+      "entryCount": 18
+    },
+    {
+      "id": "clubcards",
+      "label": "ClubCard",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/clubcards/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/clubcards/roster_2fdb89ace52a41194ba81c19ad73fc69.mp4",
+      "generation": "2fdb89ace52a41194ba81c19ad73fc69",
+      "entryCount": 8
+    },
+    {
+      "id": "theme-starlight",
+      "label": "テーマ / Starlight",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-starlight/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-starlight/roster_d5a3ba8556fd4c94aa33d97b88b47880.mp4",
+      "generation": "d5a3ba8556fd4c94aa33d97b88b47880",
+      "entryCount": 5
+    },
+    {
+      "id": "theme-anime",
+      "label": "テーマ / Anime",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-anime/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-anime/roster_fc5a714c332e9ff0d0545b55ea73cd86.mp4",
+      "generation": "fc5a714c332e9ff0d0545b55ea73cd86",
+      "entryCount": 5
+    },
+    {
+      "id": "room-lounge",
+      "label": "部屋アルバム / Lounge",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/room-lounge/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/room-lounge/roster_331c8aa9aa5a42546d1869b140212e5d.mp4",
+      "generation": "331c8aa9aa5a42546d1869b140212e5d",
+      "entryCount": 3
+    },
+    {
+      "id": "room-photo",
+      "label": "部屋アルバム / Photo",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/room-photo/manifest.json",
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/room-photo/roster_b34478465fc61fb94a872fa62e103f6d.mp4",
+      "generation": "b34478465fc61fb94a872fa62e103f6d",
+      "entryCount": 3
+    }
+  ]
+}

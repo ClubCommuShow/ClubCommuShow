@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "theme-anime",
+  "label": "テーマ / Anime",
+  "kind": "theme",
+  "generation": "fc5a714c332e9ff0d0545b55ea73cd86",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 18,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-anime/roster_fc5a714c332e9ff0d0545b55ea73cd86.mp4",
+  "videoSha256": "963267b2db6b0b19a562c009b18f72d6ad95edf6e681f3b5ac80268bcc9a9038",
+  "entries": [
+    {
+      "key": "theme|background|0",
+      "label": "背景",
+      "sourceSha256": "1df56aa34469b629875de5972a57c0c6a141f6bb6202c0ab187b54858df41175",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "theme|frame|0",
+      "label": "ボタン・枠",
+      "sourceSha256": "15abfc9ed6ce13642c4341c08809050853a3996f1eb30e71f83a001f876a67b0",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "theme|icon|0",
+      "label": "アイコン",
+      "sourceSha256": "bcd374ab2458d3bda1a111582dee10698eeb37cfb669faeff8b3216a73418f4d",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    },
+    {
+      "key": "theme|nameplate|0",
+      "label": "名札パネル",
+      "sourceSha256": "cb7a868b485a77fa81f1eefbfd053de39d45f6e83b892e595505bf332074746b",
+      "sampleFrame": 13,
+      "sampleTimeSeconds": 0.43333333333333335
+    },
+    {
+      "key": "theme|armband|0",
+      "label": "腕章パネル（タグ背景を使用）",
+      "sourceSha256": "cb7a868b485a77fa81f1eefbfd053de39d45f6e83b892e595505bf332074746b",
+      "sampleFrame": 16,
+      "sampleTimeSeconds": 0.5333333333333333
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "room-lounge",
+  "label": "部屋アルバム / Lounge",
+  "kind": "room",
+  "generation": "331c8aa9aa5a42546d1869b140212e5d",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 12,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/room-lounge/roster_331c8aa9aa5a42546d1869b140212e5d.mp4",
+  "videoSha256": "86b97f0ceb3589d8a18bb1dbe8ca043bca07f6122cd64ffa988fd1f7a826a9c4",
+  "entries": [
+    {
+      "key": "room|lounge|0",
+      "label": "Welcome",
+      "sourceSha256": "32bdb4817bcea63d86415a6d74e058d751c6be194e77bf3635c3fd927f498ac5",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "room|lounge|1",
+      "label": "イベントポスター",
+      "sourceSha256": "c32a2b140f5b862b73546c84f7297c2ab36d451e2351b4ab4d12029dd90c36f3",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "room|lounge|2",
+      "label": "ドリンク紹介",
+      "sourceSha256": "af4e689ef6e88b504c90c0cf1fabe0d4d9aaf61facd21323f6bc122379c2e57b",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    }
+  ]
+}

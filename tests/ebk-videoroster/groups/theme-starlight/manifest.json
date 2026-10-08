@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "theme-starlight",
+  "label": "テーマ / Starlight",
+  "kind": "theme",
+  "generation": "d5a3ba8556fd4c94aa33d97b88b47880",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 18,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/groups/theme-starlight/roster_d5a3ba8556fd4c94aa33d97b88b47880.mp4",
+  "videoSha256": "af17e695b4997bfc396f92f5daf710c90a7e14762dda30b440a58171662628e3",
+  "entries": [
+    {
+      "key": "theme|background|0",
+      "label": "背景",
+      "sourceSha256": "8f877b72341de97a7556ee4259c3a48d4cb58b12438c015537e68ce9fb1e97a1",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "theme|frame|0",
+      "label": "ボタン・枠",
+      "sourceSha256": "688c05431b9aea473adf34347a9e4904ebaf72e73cfc0eca2837e05ed79dbd07",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "theme|icon|0",
+      "label": "アイコン",
+      "sourceSha256": "995a10cf892a4273e62dac50d52d6440e9992864fb8b0ed1c356ac1368c5fc06",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    },
+    {
+      "key": "theme|nameplate|0",
+      "label": "名札パネル",
+      "sourceSha256": "e2996e61873bddce34a0905e13fbb523a94576a4ee2596b3120cf9d732512e8d",
+      "sampleFrame": 13,
+      "sampleTimeSeconds": 0.43333333333333335
+    },
+    {
+      "key": "theme|armband|0",
+      "label": "腕章パネル（タグ背景を使用）",
+      "sourceSha256": "e2996e61873bddce34a0905e13fbb523a94576a4ee2596b3120cf9d732512e8d",
+      "sampleFrame": 16,
+      "sampleTimeSeconds": 0.5333333333333333
+    }
+  ]
+}
