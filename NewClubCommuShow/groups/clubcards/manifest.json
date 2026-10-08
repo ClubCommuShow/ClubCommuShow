@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "clubcards",
+  "label": "ClubCard",
+  "kind": "clubcards",
+  "generation": "2fdb89ace52a41194ba81c19ad73fc69",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 27,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/groups/clubcards/roster_2fdb89ace52a41194ba81c19ad73fc69.mp4",
+  "videoSha256": "0f802998a617824a8afe7e57b80cf78499f01a5fcf37589f4edd8aced8aeb1a5",
+  "entries": [
+    {
+      "key": "clubcard|cards|90000",
+      "label": "カード / SAMPLE N",
+      "cardNumber": "90000",
+      "cardName": "SAMPLE N",
+      "rarity": "N",
+      "weight": 2000,
+      "sourceSha256": "41e184438b0b960cbbf2210f4e6bae5ca10c5424c8d87d22612acdb1439f9be9",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "clubcard|cards|90001",
+      "label": "カード / SAMPLE R",
+      "cardNumber": "90001",
+      "cardName": "SAMPLE R",
+      "rarity": "R",
+      "weight": 1000,
+      "sourceSha256": "7e166b68b74646a66c359ef47ce2a5010e9dc4f7545ff963d0b6e83783910bad",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "clubcard|cards|90002",
+      "label": "カード / SAMPLE SR",
+      "cardNumber": "90002",
+      "cardName": "SAMPLE SR",
+      "rarity": "SR",
+      "weight": 600,
+      "sourceSha256": "46c12e1b5f60382c5c5f8ab4a011f9a2ea621fb5e09d3a6299f1e471d2819de6",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    },
+    {
+      "key": "clubcard|cards|90003",
+      "label": "カード / SAMPLE SSR",
+      "cardNumber": "90003",
+      "cardName": "SAMPLE SSR",
+      "rarity": "SSR",
+      "weight": 400,
+      "sourceSha256": "60e5b362832a2d3bdbc3a011e9c9aca61dedac70236a2d2d7671fe59a2836c1b",
+      "sampleFrame": 13,
+      "sampleTimeSeconds": 0.43333333333333335
+    },
+    {
+      "key": "clubcard|cards|90004",
+      "label": "カード / SAMPLE UR",
+      "cardNumber": "90004",
+      "cardName": "SAMPLE UR",
+      "rarity": "UR",
+      "weight": 40,
+      "sourceSha256": "8fefb18e349e695630c404d7798ff654169596278e804acd078af5738817ee79",
+      "sampleFrame": 16,
+      "sampleTimeSeconds": 0.5333333333333333
+    },
+    {
+      "key": "clubcard|cards|90005",
+      "label": "カード / SAMPLE S",
+      "cardNumber": "90005",
+      "cardName": "SAMPLE S",
+      "rarity": "S",
+      "weight": 3,
+      "sourceSha256": "281c50ac383b64383b891b5f3d88733f08f3569db0a290f2db02b89af7ba1608",
+      "sampleFrame": 19,
+      "sampleTimeSeconds": 0.6333333333333333
+    },
+    {
+      "key": "clubcard|back|0",
+      "label": "カード裏面",
+      "sourceSha256": "8f877b72341de97a7556ee4259c3a48d4cb58b12438c015537e68ce9fb1e97a1",
+      "sampleFrame": 22,
+      "sampleTimeSeconds": 0.7333333333333333
+    },
+    {
+      "key": "clubcard|package|0",
+      "label": "開封パッケージ",
+      "sourceSha256": "c32a2b140f5b862b73546c84f7297c2ab36d451e2351b4ab4d12029dd90c36f3",
+      "sampleFrame": 25,
+      "sampleTimeSeconds": 0.8333333333333334
+    }
+  ]
+}

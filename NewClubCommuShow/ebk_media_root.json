@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-media-root-v1",
+  "modules": [
+    {
+      "id": "common",
+      "manifestPath": "groups/common/manifest.json",
+      "format": "ebk-sample-videoroster-v1",
+      "sampleOnly": true
+    },
+    {
+      "id": "clubcards",
+      "manifestPath": "groups/clubcards/manifest.json",
+      "format": "ebk-sample-videoroster-v1",
+      "sampleOnly": true
+    },
+    {
+      "id": "themes",
+      "manifestPath": "groups/theme_catalog.json",
+      "format": "ebk-theme-catalog-v1"
+    },
+    {
+      "id": "roomMedia",
+      "manifestPath": "groups/room_catalog.json",
+      "format": "ebk-room-media-v1",
+      "sampleOnly": true
+    },
+    {
+      "id": "sampleSuite",
+      "manifestPath": "groups/suite.json",
+      "format": "ebk-sample-media-suite-v1",
+      "sampleOnly": true
+    }
+  ]
+}

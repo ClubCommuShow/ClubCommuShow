@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "albums": [
+    {
+      "name": "部屋アルバム / Lounge",
+      "groupId": "room-lounge",
+      "imageCount": 3,
+      "fps": 30,
+      "framesPerImage": 3,
+      "slideUrl": ""
+    },
+    {
+      "name": "部屋アルバム / Photo",
+      "groupId": "room-photo",
+      "imageCount": 3,
+      "fps": 30,
+      "framesPerImage": 3,
+      "slideUrl": ""
+    }
+  ]
+}

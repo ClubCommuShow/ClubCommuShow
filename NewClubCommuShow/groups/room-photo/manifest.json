@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-sample-videoroster-v1",
+  "testOnly": true,
+  "groupId": "room-photo",
+  "label": "部屋アルバム / Photo",
+  "kind": "room",
+  "generation": "b34478465fc61fb94a872fa62e103f6d",
+  "alphaMode": "dual-matte-sbs-srgb-v1",
+  "logicalWidth": 960,
+  "logicalHeight": 540,
+  "width": 1920,
+  "height": 540,
+  "fps": 30,
+  "framesPerEntry": 3,
+  "frameCount": 12,
+  "markerFrame": 1,
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/groups/room-photo/roster_b34478465fc61fb94a872fa62e103f6d.mp4",
+  "videoSha256": "50fcd806410dda4b0c6bda36cb8e125d6987f349d405b5d634cf7a53297e9646",
+  "entries": [
+    {
+      "key": "room|photo|0",
+      "label": "撮影について",
+      "sourceSha256": "3bfe4f3b5d0c55ccdc32df7d7c2091f91565b0a1c1b94c0a6a08081a8e2bd836",
+      "sampleFrame": 4,
+      "sampleTimeSeconds": 0.13333333333333333
+    },
+    {
+      "key": "room|photo|1",
+      "label": "撮影背景",
+      "sourceSha256": "1df56aa34469b629875de5972a57c0c6a141f6bb6202c0ab187b54858df41175",
+      "sampleFrame": 7,
+      "sampleTimeSeconds": 0.23333333333333334
+    },
+    {
+      "key": "room|photo|2",
+      "label": "撮影用ロゴ",
+      "sourceSha256": "f78e48affbfc1e6aae837c7a93feeb18da364979459076442f99a9abfc565606",
+      "sampleFrame": 10,
+      "sampleTimeSeconds": 0.3333333333333333
+    }
+  ]
+}

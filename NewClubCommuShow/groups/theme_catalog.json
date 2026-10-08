@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-theme-catalog-v1",
+  "themes": [
+    {
+      "themeId": "theme-anime",
+      "displayName": "テーマ / Anime",
+      "manifestPath": "theme-anime/manifest.json",
+      "format": "ebk-sample-videoroster-v1"
+    },
+    {
+      "themeId": "theme-starlight",
+      "displayName": "テーマ / Starlight",
+      "manifestPath": "theme-starlight/manifest.json",
+      "format": "ebk-sample-videoroster-v1"
+    }
+  ]
+}
