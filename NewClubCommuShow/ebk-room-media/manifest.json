@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "albums": [
+    {
+      "name": "サンプル",
+      "imageCount": 0,
+      "fps": 30,
+      "framesPerImage": 3,
+      "sampleFrame": 1,
+      "videoUrl": "",
+      "slideUrl": "",
+      "images": [],
+      "format": "ebk-room-slides-rgb-v1",
+      "alphaMode": "opaque",
+      "logicalWidth": 1920,
+      "logicalHeight": 1080,
+      "encodedWidth": 1920,
+      "encodedHeight": 1080
+    },
+    {
+      "name": "ポチョ",
+      "imageCount": 1,
+      "fps": 30,
+      "framesPerImage": 3,
+      "sampleFrame": 1,
+      "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/ebk-room-media/videos/%E3%83%9D%E3%83%81%E3%83%A7.mp4",
+      "slideUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/ebk-room-media/videos/%E3%83%9D%E3%83%81%E3%83%A7.mp4?ebk-slides=3x30&ebk-alpha=dual-matte-sbs-srgb-v1",
+      "images": [
+        {
+          "file": "cardback2.png",
+          "sourceBlobSha": "db02910854e68c785d6e51bb5e2b7f47921f1086",
+          "sampleFrame": 1,
+          "sampleTimeSeconds": 0.03333333333333333
+        }
+      ],
+      "format": "ebk-dual-matte-sbs-srgb-v1",
+      "alphaMode": "dual-matte-sbs-srgb-v1",
+      "logicalWidth": 1920,
+      "logicalHeight": 1080,
+      "encodedWidth": 3840,
+      "encodedHeight": 1080,
+      "frameCount": 3,
+      "sha256": "474929420011b592fc50a565b9f3693221202c11c4ae16b8059a013d8d32dfe8"
+    }
+  ]
+}

@@ -4,32 +4,24 @@
   "modules": [
     {
       "id": "common",
-      "manifestPath": "groups/common/manifest.json",
-      "format": "ebk-sample-videoroster-v1",
-      "sampleOnly": true
+      "manifestPath": "common/manifest.json",
+      "format": "ebk-roster-v1"
     },
     {
       "id": "clubcards",
-      "manifestPath": "groups/clubcards/manifest.json",
-      "format": "ebk-sample-videoroster-v1",
-      "sampleOnly": true
-    },
-    {
-      "id": "themes",
-      "manifestPath": "groups/theme_catalog.json",
-      "format": "ebk-theme-catalog-v1"
+      "manifestPath": "ebk-clubcards/manifest.json",
+      "videoPath": "ebk-clubcards/cards.mp4",
+      "format": "ebk-clubcards-v1"
     },
     {
       "id": "roomMedia",
-      "manifestPath": "groups/room_catalog.json",
-      "format": "ebk-room-media-v1",
-      "sampleOnly": true
+      "manifestPath": "ebk-room-media/manifest.json",
+      "format": "ebk-room-media-v1"
     },
     {
-      "id": "sampleSuite",
-      "manifestPath": "groups/suite.json",
-      "format": "ebk-sample-media-suite-v1",
-      "sampleOnly": true
+      "id": "themes",
+      "manifestPath": "themes/theme_catalog.json",
+      "format": "ebk-theme-catalog-v1"
     }
   ]
 }
