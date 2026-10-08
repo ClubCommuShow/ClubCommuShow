@@ -1,4 +1,4 @@
-name: Build roster video 3-frame center
+name: Build EBK roster and slide albums
 
 on:
   push:
@@ -7,6 +7,13 @@ on:
     paths:
       - 'data/roster_manifest.json'
       - 'images/**'
+      - 'media/room-slides/**'
+      - 'data/room_media_slides.json'
+      - 'data/clubcard_manifest.json'
+      - 'build_room_media_slides.py'
+      - 'validate_clubcards.py'
+      - 'publish_room_media.py'
+      - 'clubcards/**'
       - 'github_manifest_to_video.py'
       - 'prepare_video_roster_manifest.py'
       - '.github/workflows/auto_build_roster_video.yml'
@@ -14,6 +21,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: roster-video-build-${{ github.ref }}
@@ -51,6 +60,7 @@ jobs:
           python prepare_video_roster_manifest.py \
             --manifest "data/roster_manifest.json" \
             --menu-dir "images/posters/menu" \
+            --allow-gaps \
             --output "data/roster_manifest.video.generated.json"
 
       - name: Build 3-frame-center mp4 and frame map
@@ -76,61 +86,38 @@ jobs:
           cp data/roster_resolved_urls.txt docs/data/roster_resolved_urls.txt
           cp videos/roster.mp4 docs/videos/roster.mp4
 
-      - name: Commit generated files safely
+      - name: Validate ClubCard and build slide albums
         run: |
+          python validate_clubcards.py
+          python build_room_media_slides.py
+          python publish_room_media.py
+
+      - name: Commit generated files without overwriting concurrent changes
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add videos/roster.mp4 data/roster_frame_map.txt data/roster_resolved_urls.txt docs/videos docs/data docs/ebk-room-media ebk-room-media
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: rebuild roster and slide albums"
+            git push origin HEAD:main
+          fi
 
-          tmpdir="$(mktemp -d)"
-          mkdir -p "$tmpdir/videos" "$tmpdir/data" "$tmpdir/docs/videos" "$tmpdir/docs/data"
+      - name: Upload the existing root Pages site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
 
-          cp videos/roster.mp4 "$tmpdir/videos/roster.mp4"
-          cp data/roster_frame_map.txt "$tmpdir/data/roster_frame_map.txt"
-          cp data/roster_resolved_urls.txt "$tmpdir/data/roster_resolved_urls.txt"
-          cp docs/videos/roster.mp4 "$tmpdir/docs/videos/roster.mp4"
-          cp docs/data/roster_manifest.json "$tmpdir/docs/data/roster_manifest.json"
-          cp docs/data/roster_frame_map.txt "$tmpdir/docs/data/roster_frame_map.txt"
-          cp docs/data/roster_resolved_urls.txt "$tmpdir/docs/data/roster_resolved_urls.txt"
-
-          for i in 1 2 3 4 5; do
-            echo "Safe push attempt $i"
-
-            git fetch origin main
-            git reset --hard origin/main
-
-            mkdir -p videos data docs/videos docs/data
-            cp "$tmpdir/videos/roster.mp4" videos/roster.mp4
-            cp "$tmpdir/data/roster_frame_map.txt" data/roster_frame_map.txt
-            cp "$tmpdir/data/roster_resolved_urls.txt" data/roster_resolved_urls.txt
-            cp "$tmpdir/docs/videos/roster.mp4" docs/videos/roster.mp4
-            cp "$tmpdir/docs/data/roster_manifest.json" docs/data/roster_manifest.json
-            cp "$tmpdir/docs/data/roster_frame_map.txt" docs/data/roster_frame_map.txt
-            cp "$tmpdir/docs/data/roster_resolved_urls.txt" docs/data/roster_resolved_urls.txt
-
-            git add \
-              videos/roster.mp4 \
-              data/roster_frame_map.txt \
-              data/roster_resolved_urls.txt \
-              docs/videos/roster.mp4 \
-              docs/data/roster_manifest.json \
-              docs/data/roster_frame_map.txt \
-              docs/data/roster_resolved_urls.txt
-
-            if git diff --cached --quiet; then
-              echo "No changes in generated files"
-              exit 0
-            fi
-
-            git commit -m "chore: rebuild roster video 3-frame center"
-
-            if git push origin HEAD:main; then
-              echo "Push succeeded"
-              exit 0
-            fi
-
-            echo "Push failed, retrying after refetch"
-            sleep 5
-          done
-
-          echo "Push failed after retries"
-          exit 1
+  deploy:
+    needs: build-video
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

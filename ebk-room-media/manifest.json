@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "albums": [
+    {
+      "name": "サンプル",
+      "imageCount": 0,
+      "fps": 30,
+      "framesPerImage": 3,
+      "sampleFrame": 1,
+      "videoUrl": "",
+      "slideUrl": "",
+      "images": []
+    }
+  ]
+}

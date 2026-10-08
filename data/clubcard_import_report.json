@@ -1,0 +1,899 @@
+{
+  "sourceZipSha256": "e7254d0dad32d7796c67ea0093b2c407021f8ff10cbadd8cc269e44fc20a3c04",
+  "recoveredImage": {
+    "path": "ClubCardSystem/CardImages/20021.png",
+    "source": "user supplied 20021.png (2026-10-08)",
+    "sourceSha256": "17f11e3d0fff3d33e229a972ce7c2f0dca185e7014133839df1f283c1805266f",
+    "reason": "newer ZIP member CRC failed; user supplied the authoritative replacement"
+  },
+  "cardCount": 63,
+  "individualOverrides": [
+    "00000",
+    "99999"
+  ],
+  "unregisteredSourceImages": [],
+  "cards": [
+    {
+      "cardNumber": "00000",
+      "sourceTexture": "ClubCardSystem/CardImages/00000.png",
+      "sourceTextureGuid": "54883797f55885f4ca41cdb4e919b96f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "cb1779d4128065192d52b9a74be7ea033dd342a12efc7a4494dac7c869431281"
+    },
+    {
+      "cardNumber": "00010",
+      "sourceTexture": "ClubCardSystem/CardImages/00010.png",
+      "sourceTextureGuid": "58009877abc51cd498b686f7acf002da",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "d56408bc772f123759d7edf5863667bb543e41b9a608cba1dbf573d8ad08442c"
+    },
+    {
+      "cardNumber": "00011",
+      "sourceTexture": "ClubCardSystem/CardImages/00011.png",
+      "sourceTextureGuid": "8eb11aa33333fe547a6749f393756db9",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "e2ed7122f0716f23da9d9e77b0b3168cc0e1dd87927cf6c2f42f8c6b63a17352"
+    },
+    {
+      "cardNumber": "00012",
+      "sourceTexture": "ClubCardSystem/CardImages/00012.png",
+      "sourceTextureGuid": "4aab95389fb30a24785a58a45a578216",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "5a8c9ffe0afd4c394b33fa147fa62e63a3c2c75f7ec2d97b5938a9f57155d1ec"
+    },
+    {
+      "cardNumber": "00013",
+      "sourceTexture": "ClubCardSystem/CardImages/00013.png",
+      "sourceTextureGuid": "4521d242b3dc8544286897bcd26f4f5f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "a19fd58f5e37c9dba7f1dadc9dd62479bdeb66371fb668e550b43f413a429f1c"
+    },
+    {
+      "cardNumber": "00014",
+      "sourceTexture": "ClubCardSystem/CardImages/00014.png",
+      "sourceTextureGuid": "11f6a0fe031115b4bb2ccdbb723dde1e",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "5e6d1e1e37045e321574ac1b965a503e249c386676129eb5429096e3a1f8ea79"
+    },
+    {
+      "cardNumber": "10010",
+      "sourceTexture": "ClubCardSystem/CardImages/10010.png",
+      "sourceTextureGuid": "7173290bb6b39a04b83ec18fe87696c0",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "025161a777be159a2da1f84bd66697654e9e65093a51ab5c15cf7f4c9a12da2e"
+    },
+    {
+      "cardNumber": "10011",
+      "sourceTexture": "ClubCardSystem/CardImages/10011.png",
+      "sourceTextureGuid": "4f46acbebe661e341a814f2f1f3c71b6",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "4dd6a9f0bb873e240b234748658728f14225bf90d875dae1abff5672fc6380f6"
+    },
+    {
+      "cardNumber": "10012",
+      "sourceTexture": "ClubCardSystem/CardImages/10012.png",
+      "sourceTextureGuid": "be8e156c77826ff47bb101ec24e148d0",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "7d9c46662b1e52acc31926631fb501219788360d0e0cebc80c64770631b51cf0"
+    },
+    {
+      "cardNumber": "10013",
+      "sourceTexture": "ClubCardSystem/CardImages/10013.png",
+      "sourceTextureGuid": "5a083eb9ff8020940bf7a335b9a2253f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "1aa69fb557a8f2ac19a2c49ab9773b5c859bbaf7648eb0154d7ad5890732d800"
+    },
+    {
+      "cardNumber": "10014",
+      "sourceTexture": "ClubCardSystem/CardImages/10014.png",
+      "sourceTextureGuid": "9de8e2d831b55d94bbdff7b5c7b803e6",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "53462aee72acc037b80c2c4243184e777d0fd41cc6b8cfe4c2e6437e7a0c2f8d"
+    },
+    {
+      "cardNumber": "20010",
+      "sourceTexture": "ClubCardSystem/CardImages/20010.png",
+      "sourceTextureGuid": "59216cfad5f213f4e9f10ec32c256b67",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "aac638dd705819aaf2b6f636b63e98dbac02c4148572fe6298dd8d00ec3ba119"
+    },
+    {
+      "cardNumber": "20011",
+      "sourceTexture": "ClubCardSystem/CardImages/20011.png",
+      "sourceTextureGuid": "70530a9b4f7a5494f93efb51d6bfd86f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "c92224534fc30359976b3eca3fa3dfa075983cf3ef921366fbf10b5e48d4ccc7"
+    },
+    {
+      "cardNumber": "20012",
+      "sourceTexture": "ClubCardSystem/CardImages/20012.png",
+      "sourceTextureGuid": "1013e07168a4b5b4d90bc9a79cdec0a1",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "159d2cec7436086f2eb12adcbc807e0cd0d962aa9650bf528784cc1b50ebb9ea"
+    },
+    {
+      "cardNumber": "20013",
+      "sourceTexture": "ClubCardSystem/CardImages/20013.png",
+      "sourceTextureGuid": "b6167ffd1435bda47ac93f95476ed709",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "102d5cb72b1e5036935efaf58fdf642423fb311a238d0bd645eae76ac4a5cd28"
+    },
+    {
+      "cardNumber": "20014",
+      "sourceTexture": "ClubCardSystem/CardImages/20014.png",
+      "sourceTextureGuid": "d748acc2119d0924c974cb7c695cf880",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "4c1e8f8f36656c704ddd4316c11b095b038717882455315505eb894127666595"
+    },
+    {
+      "cardNumber": "20020",
+      "sourceTexture": "ClubCardSystem/CardImages/20020.png",
+      "sourceTextureGuid": "e0fd8eead360e0742b3dec6027ba75a3",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "dd48f4577feddfe36c74e82e2a3e3ebf2876f38c003973a472e37597ac33ac85"
+    },
+    {
+      "cardNumber": "20021",
+      "sourceTexture": "ClubCardSystem/CardImages/20021.png",
+      "sourceTextureGuid": "2c9d4efb699899d4098f566951075be7",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "e2695f62ad5bc483643ed2bc7c1eb9dac83e410e331f06bbb17bf2c4ecb6810b"
+    },
+    {
+      "cardNumber": "20022",
+      "sourceTexture": "ClubCardSystem/CardImages/20022.png",
+      "sourceTextureGuid": "098cc13000e9ab4428472b1dec4b4c79",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "87603b66d64c871d594200d4f99709f38355599b1a58ef8b62735403905b0de7"
+    },
+    {
+      "cardNumber": "20023",
+      "sourceTexture": "ClubCardSystem/CardImages/20023.png",
+      "sourceTextureGuid": "740f1aa7e2cfedb4a80621896c558ff0",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "197da2d51ccdb496fb95d4ead3cc2cdd6db26e18eb195ca6bf607385279c1470"
+    },
+    {
+      "cardNumber": "20024",
+      "sourceTexture": "ClubCardSystem/CardImages/20024.png",
+      "sourceTextureGuid": "ff43ff9a5541ca343881d91de74d104c",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "f23aea13fa08281a8b30ffb14efa93abdb134c0e51337683ae689c0913a3a401"
+    },
+    {
+      "cardNumber": "20030",
+      "sourceTexture": "ClubCardSystem/CardImages/20030.png",
+      "sourceTextureGuid": "0e14ecb8e20d8074291dc518a1e8daa8",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "4a5ffa442e70bf692af11d6c3f9b7493edadc98efc08f98b400db0e198acece1"
+    },
+    {
+      "cardNumber": "20031",
+      "sourceTexture": "ClubCardSystem/CardImages/20031.png",
+      "sourceTextureGuid": "f59b9eb94b77fb54b9e89f0778f13357",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "66b8ff71e9f6b94a1e721c476d23cfaf4b29ae91fa48fa775806470ea22212fa"
+    },
+    {
+      "cardNumber": "20032",
+      "sourceTexture": "ClubCardSystem/CardImages/20032.png",
+      "sourceTextureGuid": "3f4ca3035e3ed6d4999b956549d23a94",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "74149b7ae72ce2f83f0483f9c2003e2a54f7fb4ba7b5774ae8a3596251d64516"
+    },
+    {
+      "cardNumber": "20033",
+      "sourceTexture": "ClubCardSystem/CardImages/20033.png",
+      "sourceTextureGuid": "058c1dc7a674cbd41ab10937d8748510",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "ac26779a05505f7043d6e20d9942e3ec3a4c42021beeec768c1b04a41c2e80e8"
+    },
+    {
+      "cardNumber": "20034",
+      "sourceTexture": "ClubCardSystem/CardImages/20034.png",
+      "sourceTextureGuid": "13fd17c7a7cd0d54faa65e1567ce48c5",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "e3ff69df9452e7ba3445c8c00193f8f1f4f2786c0ca0459b0856a27885c4285e"
+    },
+    {
+      "cardNumber": "30020",
+      "sourceTexture": "ClubCardSystem/CardImages/30020.png",
+      "sourceTextureGuid": "7b3d11aa8259d764ea0c77dfb90d89b7",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "96b985851cd1c053676caf16deed99c6846acfed558f51b7977ddda1e8f429b3"
+    },
+    {
+      "cardNumber": "30022",
+      "sourceTexture": "ClubCardSystem/CardImages/30022.png",
+      "sourceTextureGuid": "42ef26e90ec04474eb89160e08b2609c",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "60813f16c71e747cedfdfe552987349f2cbaa4d9fd06a4c39e6864fe1a023567"
+    },
+    {
+      "cardNumber": "40010",
+      "sourceTexture": "ClubCardSystem/CardImages/40010.png",
+      "sourceTextureGuid": "02182b312a66b0b43936eacaac40281f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "8b1407c43c3f345c2522f42f48a194fb93db690e82c6cae6df70d4b204ecd205"
+    },
+    {
+      "cardNumber": "40011",
+      "sourceTexture": "ClubCardSystem/CardImages/40011.png",
+      "sourceTextureGuid": "0c3f68ab33cabae478025af61a43c5e3",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "ffbedb2da351d7a243b338cc01e65ad6302512a62019a2a1074f9ebd3dcde752"
+    },
+    {
+      "cardNumber": "40012",
+      "sourceTexture": "ClubCardSystem/CardImages/40012.png",
+      "sourceTextureGuid": "9dfb13e6e8c5a324aaa1646f4e550a3d",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "c49328e61b4443c899e7ec8faf6ede5549aafb5d4eef947ac2cbc457693fccca"
+    },
+    {
+      "cardNumber": "40013",
+      "sourceTexture": "ClubCardSystem/CardImages/40013.png",
+      "sourceTextureGuid": "8bd520e2857f08949a2f1832f7d041d3",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "6954c437781f39ed679480b978f830a2343600e8bd5b6895b51f93d4c3e452e1"
+    },
+    {
+      "cardNumber": "40014",
+      "sourceTexture": "ClubCardSystem/CardImages/40014.png",
+      "sourceTextureGuid": "6b43d22b261ba2743a1160f3aae6a469",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "da7eccb2d5c5e521f3b44ae9199ceafa2ef04ba362bd66c4bbfbe7bb6e78d681"
+    },
+    {
+      "cardNumber": "45040",
+      "sourceTexture": "ClubCardSystem/CardImages/45040.png",
+      "sourceTextureGuid": "7d3db8c796d91194c81437acaec01cfd",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "b40b1c934984c83e38b54d66abcecee4d1af4168d5c290e0e6ce5187cd6c7a0d"
+    },
+    {
+      "cardNumber": "45041",
+      "sourceTexture": "ClubCardSystem/CardImages/45041.png",
+      "sourceTextureGuid": "9739e58627ea7df42a5a514ea08352af",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "3b8099adba7ca92e38965a006eb3e5c54450a4a5c640fe6f5cce0172ccf4dd1e"
+    },
+    {
+      "cardNumber": "45042",
+      "sourceTexture": "ClubCardSystem/CardImages/45042.png",
+      "sourceTextureGuid": "e0d91090d65fd3f42a8c6a948cd1d68d",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "e265a675ed6465f978696d6c31fd0b13226bcb52f9f3018bc22d59621c9448e1"
+    },
+    {
+      "cardNumber": "45043",
+      "sourceTexture": "ClubCardSystem/CardImages/45043.png",
+      "sourceTextureGuid": "cd65c020f95a2a54da927db330610bf2",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "2d9c6ae8e6f9f7faab43211271fd0ad48bd49577afd788b5843234b25455aa6f"
+    },
+    {
+      "cardNumber": "45044",
+      "sourceTexture": "ClubCardSystem/CardImages/45044.png",
+      "sourceTextureGuid": "8e91aad3096e710449400ac841515fc1",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "bab0c99545574e0ceba24d9457226c633722efca21487ce97a2d8118d59c463d"
+    },
+    {
+      "cardNumber": "50010",
+      "sourceTexture": "ClubCardSystem/CardImages/50010.png",
+      "sourceTextureGuid": "2ab472b871279c042b08027460ea060e",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "158ffa680a05aa68f9ab24a2eb8069451ea53fc7aafd57f86e728376cc64a79c"
+    },
+    {
+      "cardNumber": "50011",
+      "sourceTexture": "ClubCardSystem/CardImages/50011.png",
+      "sourceTextureGuid": "742dea5936866ee4084ad9ea75fea9c7",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "e47584770b921c1cf58a451c5185fed04a4980055db98c7a04d3fcaf9cbffb4e"
+    },
+    {
+      "cardNumber": "50012",
+      "sourceTexture": "ClubCardSystem/CardImages/50012.png",
+      "sourceTextureGuid": "9bff12ea9461262428cd6eea58e933d0",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "302da066a482ecabf1988169ab621dcb074c7a81452bf65502d8a9219c71ad1f"
+    },
+    {
+      "cardNumber": "50013",
+      "sourceTexture": "ClubCardSystem/CardImages/50013.png",
+      "sourceTextureGuid": "7a918da4f1ff3374690f44162b7087bb",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "480be2f5fd3bcea01ec240963c2e6684381b8f5412b9710ce930277ddb39808b"
+    },
+    {
+      "cardNumber": "50014",
+      "sourceTexture": "ClubCardSystem/CardImages/50014.png",
+      "sourceTextureGuid": "36b094b6bee0c934fbab23999758ec8d",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "32f5842463ba0a7bcab4c58d1bcb2bd27b5a502bb92d92545bb9d8f3cd8683a2"
+    },
+    {
+      "cardNumber": "60010",
+      "sourceTexture": "ClubCardSystem/CardImages/60010.png",
+      "sourceTextureGuid": "fbbc22f9149dbcf4186cd1dd4f72b576",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "cb7b9b664956897f830d3bd2b44d7ec68a16496f9c6e750b5a7a4fb0a5610655"
+    },
+    {
+      "cardNumber": "60011",
+      "sourceTexture": "ClubCardSystem/CardImages/60011.png",
+      "sourceTextureGuid": "65c20ffdd0b7f2a45b0cf7d08fdbe9b6",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "450fea0edb601bdf9f4b2d839231ac9641b99dea76b5d6c26b19892e9a29adb5"
+    },
+    {
+      "cardNumber": "60012",
+      "sourceTexture": "ClubCardSystem/CardImages/60012.png",
+      "sourceTextureGuid": "9f974d8539651834084d5b3f558d219e",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "c78491f2e7c17bc38c0b8015e18017f501defc8d71a200d1fb11e0059503f58c"
+    },
+    {
+      "cardNumber": "60013",
+      "sourceTexture": "ClubCardSystem/CardImages/60013.png",
+      "sourceTextureGuid": "628e73d1e3605c948b24d14c5892037e",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "1733a3fc0da5efc0459d66f8b4425793d33bb2f94274dd12b1f2f72f74e8373c"
+    },
+    {
+      "cardNumber": "60014",
+      "sourceTexture": "ClubCardSystem/CardImages/60014.png",
+      "sourceTextureGuid": "55ce9631f0d377348abd0530e50087db",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "1a8a70acd93822a999078d291a4fdb81df59e0acdfde7a3d0b619f71e265b67f"
+    },
+    {
+      "cardNumber": "65020",
+      "sourceTexture": "ClubCardSystem/CardImages/65020.png",
+      "sourceTextureGuid": "137bba5a34c80eb44ab5f43d3b6f48a3",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "d11cbbdf2b565bbfb5fd8fcf44ce7860132e0a73c6bda4a62af4e318ad0fc3b4"
+    },
+    {
+      "cardNumber": "65021",
+      "sourceTexture": "ClubCardSystem/CardImages/65021.png",
+      "sourceTextureGuid": "762527c3e0c5aac4fb76577a36e5550f",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "790107a39967d8667d26365919d7122a8d264a42bbcf3aec92e90bf77a949a44"
+    },
+    {
+      "cardNumber": "65022",
+      "sourceTexture": "ClubCardSystem/CardImages/65022.png",
+      "sourceTextureGuid": "1572bf4bb30348748820d2d4b74ace21",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "f2149dadbe16f36563663a9da48c955532b2b258987a78f4ae544a4dc26889df"
+    },
+    {
+      "cardNumber": "65023",
+      "sourceTexture": "ClubCardSystem/CardImages/65023.png",
+      "sourceTextureGuid": "bb90368bc8537014c91c4a6508764e1d",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "f4deb3c3ecec4fd61b6360a299e2509101d2d6751a272c92e32316099959681e"
+    },
+    {
+      "cardNumber": "65024",
+      "sourceTexture": "ClubCardSystem/CardImages/65024.png",
+      "sourceTextureGuid": "06e427171dde99b4ebc840b0a4b9b737",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "c6010e358270fc1cb21e86a62f860d8d275d59e36b67ad1264b995d02c2dc929"
+    },
+    {
+      "cardNumber": "75060",
+      "sourceTexture": "ClubCardSystem/CardImages/75060.png",
+      "sourceTextureGuid": "303ce648333a7fa4abe2ff07c0e9e21c",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "4b8eb691b7328d9fbf126c6b6e96c86054e7a89c204b504f523ad6ecd78f01e4"
+    },
+    {
+      "cardNumber": "75061",
+      "sourceTexture": "ClubCardSystem/CardImages/75061.png",
+      "sourceTextureGuid": "0be271e58188ec3488f4bc37dfffc06e",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "1f5dd8e13220863c25b99c1ba321d85f18af1711b8ffd17bd00150763a54d86b"
+    },
+    {
+      "cardNumber": "75062",
+      "sourceTexture": "ClubCardSystem/CardImages/75062.png",
+      "sourceTextureGuid": "64b67b922d22aed468a9f1e6ed8ff31b",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "64fc4183ad8df6b8b459d06730d4e301883bf0c743b2ade81959f48a5bfa2266"
+    },
+    {
+      "cardNumber": "75063",
+      "sourceTexture": "ClubCardSystem/CardImages/75063.png",
+      "sourceTextureGuid": "a7a384eb7954a2546a79b9be364ee025",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "03ec506d7fb3bfa6b1f811a586bcad344a24c7559cdbcc1a9a788d6b284563e8"
+    },
+    {
+      "cardNumber": "75064",
+      "sourceTexture": "ClubCardSystem/CardImages/75064.png",
+      "sourceTextureGuid": "4bb8b618a27b03c43bd460acd4d1619a",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "c473eb403cad22f06de9baa4424e76a90a446ac8df47b847cdc7ff051ceb16c4"
+    },
+    {
+      "cardNumber": "85010",
+      "sourceTexture": "ClubCardSystem/CardImages/85010.png",
+      "sourceTextureGuid": "af2353fe64472ad48b2e824235136fde",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "be73007b0d656077fc76cfb217ce020ed396fca3139dd6c5a5004052076740dc"
+    },
+    {
+      "cardNumber": "85012",
+      "sourceTexture": "ClubCardSystem/CardImages/85012.png",
+      "sourceTextureGuid": "9d6a690b1b64514478c18494f09826a5",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "cdf7e3c937644c535507ae6196a04158221dea3267af083c8dd3efb5c9f4ad40"
+    },
+    {
+      "cardNumber": "91025",
+      "sourceTexture": "ClubCardSystem/CardImages/91025.png",
+      "sourceTextureGuid": "ec9c53a6e7c18c047936ac74492052d4",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "5992056f499308898b77d8f7c8876fcc0d8ce286e959f884e1be0598c7ce5bd2"
+    },
+    {
+      "cardNumber": "92225",
+      "sourceTexture": "ClubCardSystem/CardImages/92225.png",
+      "sourceTextureGuid": "a3366bfdd59cb594bb5eef557ab8e8f0",
+      "sourceSize": [
+        744,
+        1039
+      ],
+      "registeredSize": [
+        744,
+        1039
+      ],
+      "imageSha256": "823b020b57e1cba80f97317604e4b8e47f0913f7dee36685cce75fad2d4001d8"
+    },
+    {
+      "cardNumber": "99999",
+      "sourceTexture": "ClubCardSystem/CardImages/99999.png",
+      "sourceTextureGuid": "d3372f44762c27144bc7c05a3456112f",
+      "sourceSize": [
+        1240,
+        1754
+      ],
+      "registeredSize": [
+        1240,
+        1754
+      ],
+      "imageSha256": "e81475f471c885b4aefa95ac114da4ed84c13fd2f0395f77a33d111ed45c0846"
+    }
+  ]
+}
