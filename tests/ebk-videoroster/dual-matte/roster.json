@@ -57,5 +57,6 @@
       "sourceSha256": "89eb18b7856e154a7b6e03d9de24c772b6de74ddcddbb0fa3df77919315eded5"
     }
   ],
-  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/dual-matte/roster.mp4"
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/dual-matte/roster.mp4",
+  "slideUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/dual-matte/roster.mp4?ebk-slides=3x30&ebk-alpha=dual-matte-sbs-srgb-v1"
 }
