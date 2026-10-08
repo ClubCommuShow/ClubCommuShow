@@ -32,6 +32,8 @@ jobs:
   build-video:
     runs-on: ubuntu-latest
     if: github.actor != 'github-actions[bot]'
+    outputs:
+      publish: ${{ steps.save.outputs.publish }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -93,23 +95,45 @@ jobs:
           python publish_room_media.py
 
       - name: Commit generated files without overwriting concurrent changes
+        id: save
+        shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          base_sha="$(git rev-parse HEAD)"
           git add videos/roster.mp4 data/roster_frame_map.txt data/roster_resolved_urls.txt docs/videos docs/data docs/ebk-room-media ebk-room-media
           if ! git diff --cached --quiet; then
             git commit -m "chore: rebuild roster and slide albums"
-            git push origin HEAD:main
           fi
+          for attempt in 1 2 3; do
+            git fetch origin main
+            # A newer input commit has its own queued workflow. Never publish this
+            # older manifest/video snapshot over that upload.
+            if ! git diff --quiet "$base_sha" origin/main -- data/roster_manifest.json images media/room-slides data/room_media_slides.json data/clubcard_manifest.json build_room_media_slides.py validate_clubcards.py publish_room_media.py clubcards github_manifest_to_video.py prepare_video_roster_manifest.py .github/workflows/auto_build_roster_video.yml; then
+              echo "Newer media inputs detected; the queued build will publish them."
+              echo "publish=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            # Only unrelated upstream changes are rebased. No force push.
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "publish=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "Unable to publish generated media after 3 attempts." >&2
+          exit 1
 
       - name: Upload the existing root Pages site
+        if: steps.save.outputs.publish == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
   deploy:
     needs: build-video
+    if: needs.build-video.outputs.publish == 'true'
     runs-on: ubuntu-latest
     concurrency:
       group: pages
