@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "testOnly": true,
+  "generation": "609785995dcf",
+  "members": [
+    {
+      "category": "Owner",
+      "slot": 0,
+      "name": "Astra",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/owner/slot0.png",
+      "images": {
+        "portrait": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/owner/slot0.png",
+          "framing": "bust",
+          "crop": {
+            "x": 0.25,
+            "y": 0.5,
+            "width": 0.5,
+            "height": 0.5
+          }
+        },
+        "standee": {
+          "source": "custom",
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Standee.png"
+        },
+        "icon": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Icon.png"
+        }
+      }
+    },
+    {
+      "category": "Operator",
+      "slot": 0,
+      "name": "Noa",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/operator/slot0.png",
+      "images": {
+        "portrait": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/operator/slot0.png",
+          "framing": "bust",
+          "crop": {
+            "x": 0.25,
+            "y": 0.5,
+            "width": 0.5,
+            "height": 0.5
+          }
+        },
+        "standee": {
+          "source": "custom",
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Standee.png"
+        },
+        "icon": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Icon.png"
+        }
+      }
+    },
+    {
+      "category": "Staff",
+      "slot": 0,
+      "name": "Mio",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/staff/slot0.png",
+      "images": {
+        "portrait": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/staff/slot0.png",
+          "framing": "bust",
+          "crop": {
+            "x": 0.25,
+            "y": 0.5,
+            "width": 0.5,
+            "height": 0.5
+          }
+        },
+        "standee": {
+          "source": "custom",
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Standee.png"
+        },
+        "icon": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Icon.png"
+        }
+      }
+    },
+    {
+      "category": "CastLeader",
+      "slot": 0,
+      "name": "Ren",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/castleader/slot0.png",
+      "images": {
+        "portrait": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/castleader/slot0.png",
+          "framing": "bust",
+          "crop": {
+            "x": 0.25,
+            "y": 0.5,
+            "width": 0.5,
+            "height": 0.5
+          }
+        },
+        "standee": {
+          "source": "custom",
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Standee.png"
+        },
+        "icon": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Icon.png"
+        }
+      }
+    },
+    {
+      "category": "UpperCast",
+      "slot": 0,
+      "name": "Ciel",
+      "enabled": true,
+      "hasPermission": false,
+      "showPortrait": true,
+      "showName": true,
+      "showArmband": false,
+      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/uppercast/slot0.png",
+      "images": {
+        "portrait": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/portraits/uppercast/slot0.png",
+          "framing": "bust",
+          "crop": {
+            "x": 0.25,
+            "y": 0.5,
+            "width": 0.5,
+            "height": 0.5
+          }
+        },
+        "standee": {
+          "source": "custom",
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Standee.png"
+        },
+        "icon": {
+          "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Icon.png"
+        }
+      }
+    }
+  ],
+  "posters": [
+    {
+      "category": "EventPoster",
+      "slot": 0,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Posters/EBK_MoonlitBookCafe.png"
+    },
+    {
+      "category": "EventPoster",
+      "slot": 1,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Posters/EBK_SundayTeaRoom.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 0,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_LuminousSoda.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 1,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_MidnightLatte.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 2,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_NightTerraceSand.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 3,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_StarlightParfait.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 4,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_TalkThemeCards.png"
+    },
+    {
+      "category": "Menu",
+      "slot": 5,
+      "enabled": true,
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_KiramekiPhotoTicket.png"
+    }
+  ],
+  "videoRoster": {
+    "enabled": true,
+    "format": "ebk-dual-matte-sbs-srgb-v1",
+    "fps": 30,
+    "framesPerPortrait": 3,
+    "sampleFrame": 1,
+    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/videos/roster.mp4",
+    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/data/roster_frame_map.txt"
+  }
+}

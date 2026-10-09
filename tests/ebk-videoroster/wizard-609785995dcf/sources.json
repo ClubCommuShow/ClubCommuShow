@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "generation": "609785995dcf",
+  "images": [
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_ButtonBackground.png",
+      "sha256": "688c05431b9aea473adf34347a9e4904ebaf72e73cfc0eca2837e05ed79dbd07",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_ButtonBackground.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_ButtonBackground_Anime.png",
+      "sha256": "15abfc9ed6ce13642c4341c08809050853a3996f1eb30e71f83a001f876a67b0",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_ButtonBackground_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_DefaultProfile.png",
+      "sha256": "995a10cf892a4273e62dac50d52d6440e9992864fb8b0ed1c356ac1368c5fc06",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_DefaultProfile.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_DefaultProfile_Anime.png",
+      "sha256": "bcd374ab2458d3bda1a111582dee10698eeb37cfb669faeff8b3216a73418f4d",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_DefaultProfile_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_EventLogo.png",
+      "sha256": "c32a2b140f5b862b73546c84f7297c2ab36d451e2351b4ab4d12029dd90c36f3",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_EventLogo.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_EventLogo_Anime.png",
+      "sha256": "f78e48affbfc1e6aae837c7a93feeb18da364979459076442f99a9abfc565606",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_EventLogo_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_GuideImage.png",
+      "sha256": "5acc92ae6b3081de04e71caa0e23e55710521def46449bb7d750746111ba7a15",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_GuideImage.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Guide_Photo.png",
+      "sha256": "3bfe4f3b5d0c55ccdc32df7d7c2091f91565b0a1c1b94c0a6a08081a8e2bd836",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Guide_Photo.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Guide_Welcome.png",
+      "sha256": "32bdb4817bcea63d86415a6d74e058d751c6be194e77bf3635c3fd927f498ac5",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Guide_Welcome.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_LeftHandMenu.png",
+      "sha256": "cb40fc7a894043aaa3967e2748cc2a58c5db8e63b6265708cb08b9201ffa090d",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_LeftHandMenu.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_LeftHandMenu_Anime.png",
+      "sha256": "a1e103550efac59948e518bfba2f16509707aa513163471f7a78ffb0de208280",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_LeftHandMenu_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Icon.png",
+      "sha256": "46c12e1b5f60382c5c5f8ab4a011f9a2ea621fb5e09d3a6299f1e471d2819de6",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Icon.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Portrait.png",
+      "sha256": "db6a5bc565c082f252e9093c4eb5a05af590d3c176fb06175e8b5231f1f9a50e",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Portrait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Standee.png",
+      "sha256": "dcb6a0f785c4e1b3e5d157575d6865f737fd2ed77170a1b79c3ecfde2b114aad",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Cast_Standee.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Icon.png",
+      "sha256": "41e184438b0b960cbbf2210f4e6bae5ca10c5424c8d87d22612acdb1439f9be9",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Icon.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Portrait.png",
+      "sha256": "e8d4531efd43e02bb910095ae010a85e3f7e0e5b34eb72b23a662b5c967bdc06",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Portrait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Standee.png",
+      "sha256": "78899fc48f5c705ba18e6fcba20ae334336d0b993f7d77926c8908208df3d0c5",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_General_Standee.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Icon.png",
+      "sha256": "8fefb18e349e695630c404d7798ff654169596278e804acd078af5738817ee79",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Icon.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Portrait.png",
+      "sha256": "c22808747641e4f45936292d629507a9210747e6e3f7365d77720f5b378db27b",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Portrait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Standee.png",
+      "sha256": "013cb2d69057e7704aca2a4fa7ad3309e7a898499625737494a4c86768ea928f",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Owner_Standee.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Icon.png",
+      "sha256": "60e5b362832a2d3bdbc3a011e9c9aca61dedac70236a2d2d7671fe59a2836c1b",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Icon.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Portrait.png",
+      "sha256": "05c0d11cdce35c71b3cdae5e62f375f513cc041b6515a295a10351c636026ae9",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Portrait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Standee.png",
+      "sha256": "67541a8701451ec349e67a21ff0d5ee4885bfce4d0b791e1f1069e19bc7554ca",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_Staff_Standee.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Icon.png",
+      "sha256": "7e166b68b74646a66c359ef47ce2a5010e9dc4f7545ff963d0b6e83783910bad",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Icon.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Portrait.png",
+      "sha256": "be56f5025d5fb933b564fbe150ac1fcec62289ba7d3d215dba8aa92665689620",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Portrait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Standee.png",
+      "sha256": "d65243612df9bf43c5b1cc59b9ab043c10feb7874c36d4f9cefbfe046c1becf8",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Member_VIP_Standee.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_MenuBackground.png",
+      "sha256": "8f877b72341de97a7556ee4259c3a48d4cb58b12438c015537e68ce9fb1e97a1",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_MenuBackground.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_MenuBackground_Anime.png",
+      "sha256": "1df56aa34469b629875de5972a57c0c6a141f6bb6202c0ab187b54858df41175",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_MenuBackground_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_PhotoOverlayLogo.png",
+      "sha256": "33eb49184f48358ef3beb99c4daf2048302a0ddb11820e7a230878c8344fd589",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_PhotoOverlayLogo.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_PhotoOverlayLogo_Anime.png",
+      "sha256": "f78e48affbfc1e6aae837c7a93feeb18da364979459076442f99a9abfc565606",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_PhotoOverlayLogo_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_KiramekiPhotoTicket.png",
+      "sha256": "66be6a6f72d66994479cc54cef4c4b6cea36bdb1d3cba8a79e6e42aa3a020717",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_KiramekiPhotoTicket.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_LuminousSoda.png",
+      "sha256": "af4e689ef6e88b504c90c0cf1fabe0d4d9aaf61facd21323f6bc122379c2e57b",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_LuminousSoda.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_MidnightLatte.png",
+      "sha256": "d289f5f76c78aeac3b5bd6834725b53684a4da96e092b18cfccacef81c1f465d",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_MidnightLatte.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_NightTerraceSand.png",
+      "sha256": "c6f68c22ae4a2893069dc4d04a615337763ba8421a1ce4aa1bdd4dc9df553a4c",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_NightTerraceSand.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_StarlightParfait.png",
+      "sha256": "96856d737328104c3885442cc8c6cdc5128a4242a2751bd7b16208d05f4b6083",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_StarlightParfait.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_Product_TalkThemeCards.png",
+      "sha256": "281c50ac383b64383b891b5f3d88733f08f3569db0a290f2db02b89af7ba1608",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_Product_TalkThemeCards.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_TagBackground.png",
+      "sha256": "e2996e61873bddce34a0905e13fbb523a94576a4ee2596b3120cf9d732512e8d",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_TagBackground.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Images/EBK_Sample_TagBackground_Anime.png",
+      "sha256": "cb7a868b485a77fa81f1eefbfd053de39d45f6e83b892e595505bf332074746b",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Images/EBK_Sample_TagBackground_Anime.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Posters/EBK_MoonlitBookCafe.png",
+      "sha256": "6a69ffd0fc396d915a58a194a30549a6ecfdc4da44b66d6ddd3836b2854bd652",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Posters/EBK_MoonlitBookCafe.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/SampleData/DefaultAssets/Posters/EBK_SundayTeaRoom.png",
+      "sha256": "f92d605d895e3b96b859e161dcec385da67c04718fbe86f24acba357444fda0e",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/SampleData/DefaultAssets/Posters/EBK_SundayTeaRoom.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_N.png",
+      "sha256": "41e184438b0b960cbbf2210f4e6bae5ca10c5424c8d87d22612acdb1439f9be9",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_N.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_R.png",
+      "sha256": "7e166b68b74646a66c359ef47ce2a5010e9dc4f7545ff963d0b6e83783910bad",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_R.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_S.png",
+      "sha256": "281c50ac383b64383b891b5f3d88733f08f3569db0a290f2db02b89af7ba1608",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_S.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_SR.png",
+      "sha256": "46c12e1b5f60382c5c5f8ab4a011f9a2ea621fb5e09d3a6299f1e471d2819de6",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_SR.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_SSR.png",
+      "sha256": "60e5b362832a2d3bdbc3a011e9c9aca61dedac70236a2d2d7671fe59a2836c1b",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_SSR.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/SampleAssets/CardFace_UR.png",
+      "sha256": "8fefb18e349e695630c404d7798ff654169596278e804acd078af5738817ee79",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/SampleAssets/CardFace_UR.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/Textures/ClubCardSparkle.png",
+      "sha256": "b0e79f3b1569cdead5f669e51c90a930a1027cd970ae82774449601a47005443",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/Textures/ClubCardSparkle.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/Textures/cardback.png",
+      "sha256": "8f877b72341de97a7556ee4259c3a48d4cb58b12438c015537e68ce9fb1e97a1",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/Textures/cardback.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/Service/ClubCardSystem/Textures/package.png",
+      "sha256": "c32a2b140f5b862b73546c84f7297c2ab36d451e2351b4ab4d12029dd90c36f3",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/Service/ClubCardSystem/Textures/package.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/lounge_button.png",
+      "sha256": "a98b329ecda66b1f1366307a2beaa3eeabe648f9104e7a1c2b9d1df7428625d5",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/lounge_button.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/lounge_panel.png",
+      "sha256": "cac94e2e26c751ca835aafd103a8203f44c177d2e197351614ce4a55f8262ee3",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/lounge_panel.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/lounge_strip.png",
+      "sha256": "5246a9f2a07bd96e072af4940d4806eb1c03633c505bb3b4dcbbef56082a6074",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/lounge_strip.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/moonlight_button.png",
+      "sha256": "04cb6c4431710267f3817b39fa4eadae6acbdf90128ed55ed2a6607a4d332512",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/moonlight_button.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/moonlight_panel.png",
+      "sha256": "db9a0088fe94c969d4d6518e8cc8d72b405a2be7e8f04e47bb645a4e43b47fd0",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/moonlight_panel.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/moonlight_strip.png",
+      "sha256": "f2e21880f7f196c31f70c3e1e6f16260897a716df0bbe4d39838f6a3e18b7e5c",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/moonlight_strip.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/night_button.png",
+      "sha256": "7eb62dc309a58aafa02f072e839e2f0ea8447fbc556ffee60882d0ee808c946d",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_button.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/night_panel.png",
+      "sha256": "5791724db2f2cb100198ad2cb1e660fa079c00f156395ede28f3f43eb397156f",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_panel.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/night_strip.png",
+      "sha256": "0bfd68647f426837cdddc680b4799dbb625c89271559da49262e5c5156347895",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_strip.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/simple_button.png",
+      "sha256": "7e4398f95884b98bc0050cbb318f0d23990cb006edb2691f0c15ce48f0319519",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/simple_button.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/simple_panel.png",
+      "sha256": "2101503f7a52c925e408d799336a1d82c2513200009f40aa47e8482eaf2d38c9",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/simple_panel.png"
+    },
+    {
+      "sourcePath": "Assets/_EBK_EventBasicKit/ThemeSDK/Art/Club/simple_strip.png",
+      "sha256": "f9d2a4e8218bd6eb75bdb587ce1a2aac1521ee841cb55cb52fd498148e77b221",
+      "url": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/simple_strip.png"
+    }
+  ],
+  "legacyDataUnchanged": true,
+  "videoAlphaMode": "ebk-dual-matte-sbs-srgb-v1",
+  "pngAlphaPreserved": true,
+  "notes": "PNG原本はWizardとバイト一致。動画は黒白ペア透過・3フレーム形式。透過PNGと動画の見た目一致はUnity/VRChatで未検証。Theme動画は素材比較用で自動テーマ適用形式ではない。注意事項/カンペはWizard本文を維持。"
+}

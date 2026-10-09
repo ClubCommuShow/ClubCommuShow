@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "testOnly": true,
+  "format": "ebk-dual-matte-sbs-srgb-v1",
+  "themeId": "ebk.night",
+  "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/themes/night/roster.mp4",
+  "fps": 30,
+  "framesPerEntry": 3,
+  "sampleFrame": 1,
+  "textures": [
+    {
+      "slotKey": "ui.menu.background",
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_panel.png",
+      "sampleFrame": 1
+    },
+    {
+      "slotKey": "ui.button.normal",
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_button.png",
+      "sampleFrame": 4
+    },
+    {
+      "slotKey": "nameplate.background",
+      "imageUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/images/originals/ThemeSDK/Art/Club/night_strip.png",
+      "sampleFrame": 7
+    }
+  ]
+}

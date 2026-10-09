@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "format": "ebk-media-root-v1",
+  "testOnly": true,
+  "modules": [
+    {
+      "id": "common",
+      "manifestPath": "data/roster_manifest.json",
+      "format": "ebk-roster-v1"
+    }
+  ]
+}

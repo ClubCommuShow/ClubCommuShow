@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "testOnly": true,
+  "themes": [
+    {
+      "themeId": "ebk.lounge",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/themes/lounge/manifest.json"
+    },
+    {
+      "themeId": "ebk.night",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/themes/night/manifest.json"
+    },
+    {
+      "themeId": "ebk.moonlight",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/themes/moonlight/manifest.json"
+    },
+    {
+      "themeId": "ebk.simple",
+      "manifestUrl": "https://clubcommushow.github.io/ClubCommuShow/tests/ebk-videoroster/wizard-609785995dcf/themes/simple/manifest.json"
+    }
+  ]
+}
