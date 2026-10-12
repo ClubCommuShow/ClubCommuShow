@@ -134,24 +134,12 @@
       "category": "Staff",
       "enabled": true,
       "hasPermission": true,
-      "name": "nekomaru49",
-      "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot0.png",
-      "showArmband": true,
-      "showName": true,
-      "showPortrait": true,
-      "slot": 0,
-      "spawnKey": "staff_room"
-    },
-    {
-      "category": "Staff",
-      "enabled": true,
-      "hasPermission": true,
       "name": "星海ヒロ",
       "portraitUrl": "https://clubcommushow.github.io/ClubCommuShow/images/portraits/staff/slot1.png",
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 1,
+      "slot": 0,
       "spawnKey": "staff_room"
     },
     {
@@ -163,7 +151,7 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 2,
+      "slot": 1,
       "spawnKey": "staff_room"
     },
     {
@@ -175,7 +163,7 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 3,
+      "slot": 2,
       "spawnKey": "staff_room"
     },
     {
@@ -187,7 +175,7 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 4,
+      "slot": 3,
       "spawnKey": "staff_room"
     },
     {
@@ -199,7 +187,7 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 5,
+      "slot": 4,
       "spawnKey": "staff_room"
     },
     {
@@ -211,7 +199,7 @@
       "showArmband": true,
       "showName": true,
       "showPortrait": true,
-      "slot": 6,
+      "slot": 5,
       "spawnKey": "staff_room"
     },
     {
