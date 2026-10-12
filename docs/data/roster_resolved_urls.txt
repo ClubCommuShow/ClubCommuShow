@@ -13,7 +13,6 @@ https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portra
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot3.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot4.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot5.png
-https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/staff/slot6.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/switchcast/slot0.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/switchcast/slot1.png
 https://raw.githubusercontent.com/ClubCommuShow/ClubCommuShow/main/images/portraits/castleader/slot0.png
