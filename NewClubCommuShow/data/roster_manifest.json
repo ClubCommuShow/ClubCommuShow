@@ -808,10 +808,10 @@
   "videoRoster": {
     "enabled": true,
     "fps": 30,
-    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/data/roster_frame_map.txt",
-    "framesPerPortrait": 3,
+    "framesPerEntry": 3,
     "sampleFrame": 1,
-    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/videos/roster.mp4"
+    "videoUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/common/roster.mp4",
+    "frameMapUrl": "https://clubcommushow.github.io/ClubCommuShow/NewClubCommuShow/common/frame_map.txt"
   },
   "posterTextEnabled": true
 }
